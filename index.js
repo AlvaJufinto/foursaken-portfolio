@@ -1,8 +1,8 @@
 const { useState } = React;
 
-// const { RouterProvider, useRoutes } = ReactRouterDOM;
+const { Link, Route, HashRouter} = ReactRouterDOM;
 
-// const App = () => {
+// const Home = () => {
 //     const [index, setIndex] = useState(0);
 
 //     const people = [
@@ -25,7 +25,7 @@ const { useState } = React;
 //     ]
 
 //    return (
-//         <div className="h-[100vh] bg-[#E9EAE0] flex items-center justify-evenly gap-[10px]">   
+//         <div className="h-[100vh] bg-[blue] flex items-center justify-evenly gap-[10px]">   
 //             {
 //                 people.map((person, i) => (
 //                     <div className={`bg-[${person.color}] h-[500px] w-[100px] opacity-50 transition hover:opacity-100 hover:scale-125 hover:mx-[120px]`}>
@@ -37,21 +37,23 @@ const { useState } = React;
 //     );
 // }
 
-const Link = ReactRouterDOM.Link;
-const Route = ReactRouterDOM.Route;
-
 const App = () => (
-    <ReactRouterDOM.HashRouter>
-      <ul className="flex justify-between">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/register">Register</Link></li>
-      </ul>
+    <HashRouter>
+      <nav className="flex justify-center ">
+        <ul className="flex w-[1270px] max-w-[1270px] justify-between ml-10 mr-[34px] mt-3 font-sora  bg-transparent">
+          <li><Link to="/">Foursaken</Link></li>
+          <div className="flex justify-end space-x-10">
+              <li className="justify-self-end"><Link to="/">Home</Link></li>
+              <li><Link to="/login">Login</Link></li>
+              <li><Link to="/register">Register</Link></li>
+          </div>
+        </ul>
+      </nav>
 
       <Route path="/" exact component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
-    </ReactRouterDOM.HashRouter>
+    </HashRouter>
   )
 
   const Home = () => <h1>Home</h1>
