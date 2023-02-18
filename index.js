@@ -4,8 +4,8 @@ const { Link, Route, HashRouter} = ReactRouterDOM;
 
 const App = () => (
     <HashRouter>
-      <nav className="flex justify-center font-semibold text-white">
-        <ul className="flex w-[1270px] max-w-[1270px] justify-between ml-10 mr-10 pt-3 font-sora bg-[#98B7DE]">
+      <nav className="flex justify-center font-semibold text-white mb-[-3rem]">
+        <ul className="flex w-[1270px] max-w-[1270px] justify-between ml-10 mr-10 pt-3 font-sora bg-transparent">
 
           <div className="nav-logo flex">
             <img src="./img/arrow-navbar.png" className="max-w-[22px] max-h-[20px] relative top-[7.79px] "/>
@@ -34,32 +34,50 @@ const Home = () => {
     const people = [
         {
             name: 'Zaidan',
-            color: '#D48C70'
+            image: './img/zaidan-transparent.png',
+            position: '0.2px'
         },
         {
             name: 'Alva',
-            color: '#F4B9B8'
-        },
-        {
-            name: 'Fajar',
-            color: '#EBBBC3'
+            image: './img/alva-transparent.png',
+            position: '0.2px'
         },
         {
             name: 'Syafiq',
-            color: '#E98980'
+            image: './img/syafiq-transparent.png',
+            position: '0px'
+        },
+        {
+            name: 'Fajar',
+            image: './img/pajar-transparent.png',
+            position: '0px'
         },
     ]
 
    return (
-        <div className="container mx-auto px-4 h-[100vh] bg-[#98B7DE] relative bottom-[2.99rem] z-[-2] flex items-center justify-evenly gap-[10px]">   
-            {
-                people.map((person, i) => (
-                    <div className={`bg-[${person.color}] h-[500px] w-[100px] opacity-50 transition hover:opacity-100 hover:scale-125 hover:mx-[120px]`}>
-                        <h3>{person.name}</h3>
-                    </div>
-                ))
-            }
+        <div id="header">
+          <div className="flex flex-col h-fit bg-[#98B7DE] z-[-2]  mb-[12rem] items-center justify-evenly gap-[10px]">   
+            <h1 className="font-bold text-[26px] text-white mb-[4rem] mt-[8rem]">Creative Code House</h1>
+            <div className='flex flex-row'>
+              {
+                  people.map((person) => (
+                      <div className={`relative top-[${person.position}] max-w-fit transition grayscale-[100%] hover:grayscale-0 hover:scale-125  hover:-translate-y-[3.5rem] `}>
+                          <img src={person.image} />
+                      </div>
+                  ))
+              }            
+              </div>
+          </div>
+            <div class="marquee-w ">
+              <div class="marquee">
+                  <span>Foursaken ･ Foursaken ･ Foursaken ･ </span>
+              </div>
+              <div class="marquee marquee2">
+                  <span>Foursaken ･ Foursaken ･ Foursaken ･ </span>
+              </div>
+            </div>
         </div>
+
     );
 }
 
