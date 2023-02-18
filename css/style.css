@@ -8,10 +8,9 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    height: 114rem;
-    top: 33rem;
+    height: 14rem;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -200%);
     overflow: hidden;
 }
 .marquee {
@@ -21,18 +20,12 @@ body {
     white-space: nowrap;
     overflow: hidden;
     min-width: 100%;
-    height: 100%;
 }
 .marquee span {
     display: inline-block;
-    font-family: 'poppinsbold';
     padding-left: 100%;
     color: white;
-    text-align: center;
     white-space: nowrap;
-    min-width: 100%;
-    height: 100%;
-    line-height: 140px;
     font-size: 12rem;
     animation: marquee 20s linear infinite;
 }
