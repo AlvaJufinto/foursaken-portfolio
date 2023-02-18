@@ -65,8 +65,8 @@ const Home = () => {
             <div className='flex flex-row justify-between w-[100%] max-w-[1270px] h-[100%] max-h-[450px]'>
               { 
                   people.map((person) => (
-                      <div className={`relative top-[${person.position}] w-[300px] h-[500%] transition duration-300 grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[70px]  hover:w-[350px] hover:translate-y-[-50px]`}>
-                          <div className="absolute right-[0px] top-[-7vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
+                      <div className={`header-img relative top-[${person.position}] w-[300px] h-[500%] transition duration-300 grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[70px]  hover:w-[350px] hover:translate-y-[-50px]`}>
+                          <div className="card transition duration-300 opacity-0 absolute right-[0px] top-[-7vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
                             <p>Hi👋, My name is {person.name}</p>
                             <p>I'm a <span className="text-[#9747FF]">{person.role}</span></p>
                           </div>

@@ -53,3 +53,7 @@ body {
 .font-bebas {
     font-family: 'Bebas Neue', cursive;
 }
+
+.header-img:hover .card {
+    opacity: 1;
+}
