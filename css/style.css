@@ -52,3 +52,9 @@ body {
     display: block;
     transform: translate(5vw, -7vw);
 }
+
+.header-img:hover .card.left {
+    opacity: 1;
+    display: block;
+    transform: translate(0vw, -7vw);
+}
