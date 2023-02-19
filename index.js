@@ -85,7 +85,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-row container font-sora mx-auto max-w-[1270px] justify-between mt-[6rem] mb-[6rem]">
-          <h1 className="max-w-[45rem] text-[36px] text-start font-medium">Our vision is to <span className="underline text-[#15013C]">Build. Develop. Grow.</span> We help you to build <b>your</b> dream world with <span className="whitespace-nowrap text-[#9747FF]">professional</span> standard.</h1>
+          <h1 className="max-w-[45rem] text-[36px] text-start font-medium">Our vision is to <span className="underline text-[#15013C]">Build. Develop. Grow.</span> We help you to build <span className="whitespace-nowrap text-[#9747FF]">your dream world</span> with professional standard.</h1>
           <div className="flex flex-col max-w-[19rem] flex-start left-[5.5rem]">
             <p className="text-[20px] font-normal">With our passion in Code, Design, and Build, we make website and app to help your brand stands out. Don't worry about stuff, just leave it to us!</p>
             <div className="relative">
