@@ -65,10 +65,10 @@ const Home = () => {
     ]
 
    return (
-      <div>
-        <div className="header bg-transparent w-[100%] bg-[#000000]">
-          <div className="flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] items-center justify-evenly gap-[100px]">   
-            <h1 className="font-bold text-[26px] text-white mt-[8rem]">Creative Code House</h1>
+      <div id="content">
+        <div className="header bg-transparent w-[100%] max-h-[800px]">
+          <div className="flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] mb-[12rem] items-center justify-evenly gap-[100px]">   
+            <h1 className="font-bold text-[26px] text-white mt-[8rem] flex">Creative Code House <img src="./img/cch-vektor.png" className="w-[11px] h-[11px] relative right-[2px] top-[7px] " /></h1>
             <div className='flex flex-row justify-between w-[100%] max-w-[1270px] h-[100%] max-h-[450px] bg-transparent'>
               { 
                   people.map((person) => (
@@ -81,7 +81,7 @@ const Home = () => {
                       </div>
                   ))
               }            
-              </div>
+            </div>
           </div>
           <div className="marquee-w pointer-events-none	">
             <div className="marquee font-bebas">
@@ -92,9 +92,16 @@ const Home = () => {
             </div>
           </div>
         </div>
-        asdasd
-      </div>
-
+          <div className="flex flex-row container font-sora mx-auto px-[8rem] mt-[6rem] mb-[6rem]">
+              <h1 className="max-w-[45rem] text-[36px] text-start font-medium">Our vision is to <span className="underline text-[#15013C]">Build. Develop. Grow.</span> We help to build world standard of <span className="whitespace-nowrap text-[#9747FF]">Web Design.</span></h1>
+              <div className="flex flex-col max-w-[19rem] flex-start relative left-[5.5rem]">
+                <p className="text-[20px] font-normal">With our passion in Code Design and Build, we build website to helping brand stand out, Don't worry leave it to us!</p>
+                <div className="w-[200px] h-[200px] mt-[2rem] bg-[#15013C] text-white rounded-full flex justify-center items-center">
+                  About Us
+                </div>
+              </div>
+          </div>
+        </div>
     );
 }
 
