@@ -96,7 +96,7 @@ const Home = () => {
               <h1 className="max-w-[45rem] text-[36px] text-start font-medium">Our vision is to <span className="underline text-[#15013C]">Build. Develop. Grow.</span> We help to build world standard of <span className="whitespace-nowrap text-[#9747FF]">Web Design.</span></h1>
               <div className="flex flex-col max-w-[19rem] flex-start relative left-[5.5rem]">
                 <p className="text-[20px] font-normal">With our passion in Code Design and Build, we build website to helping brand stand out, Don't worry leave it to us!</p>
-                <div className="w-[200px] h-[200px] mt-[2rem] bg-[#15013C] text-white rounded-full flex justify-center items-center">
+                <div className="w-[200px] h-[200px] mt-[2rem] bg-[#15013C] text-white rounded-full flex justify-center items-center duration-700 ease-in-out hover:w-[300px] hover:bg-[#230264]">
                   About Us
                 </div>
               </div>
