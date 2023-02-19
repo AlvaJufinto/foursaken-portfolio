@@ -5,12 +5,12 @@ body {
 }
 
 .marquee-w {
-    position: relative;
+    position: absolute;
     display: block;
     width: 100%;
     height: 14rem;
     left: 50%;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -100%);
     overflow: hidden;
 }
 .marquee {
@@ -26,7 +26,7 @@ body {
     padding-left: 100%;
     color: white;
     white-space: nowrap;
-    font-size: 12rem;
+    font-size: 10rem;
     animation: marquee 20s linear infinite;
 }
 .marquee2 span {

@@ -11,13 +11,13 @@ const App = () => (
             <li><Link to="/"><h1 className="ml-2 text-[24px]">Foursaken</h1></Link></li>
           </div>
 
-          {/* <div className="flex justify-end space-x-10 text-[16px] mt-2">
+          <div className="flex justify-end space-x-10 text-[16px] mt-2">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/work">Work</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/article">Article</Link></li>
             <li><Link to="/contact">Contacts</Link></li>
-          </div> */}
+          </div>
 
         </ul>
       </nav>
@@ -66,24 +66,24 @@ const Home = () => {
 
    return (
       <div>
-        <div className="header bg-transparent w-[100%] max-h-[800px]">
-          <div className="flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] mb-[12rem] items-center justify-evenly gap-[100px]">   
+        <div className="header bg-transparent w-[100%] bg-[#000000]">
+          <div className="flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] items-center justify-evenly gap-[100px]">   
             <h1 className="font-bold text-[26px] text-white mt-[8rem]">Creative Code House</h1>
             <div className='flex flex-row justify-between w-[100%] max-w-[1270px] h-[100%] max-h-[450px] bg-transparent'>
               { 
                   people.map((person) => (
-                      <div className={`header-img w-[300px] transition duration-500 grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[70px] hover:w-[350px] hover:translate-y-[-30px] bg-[#9747FF]`}>
-                          <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-500 opacity-0 absolute right-[0px] translate-y-[20vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
+                      <div className={`relative botom-[0px] header-img w-[300px] py-[20px] transition duration-500 ease-in-out grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[80px] hover:w-[350px] hover:translate-y-[10px]`}>
+                          <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-500 opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
                             <p className="font-semibold">Hi👋, My name is {person.name}</p>
                             <p className="font-semibold">I'm a <span className="text-[#9747FF]">{person.role}</span></p>
                           </div>
-                          <img src={person.image} />
+                          <img className="transition duration-500 max-h-[30vw]" src={person.image} />
                       </div>
                   ))
               }            
               </div>
           </div>
-          <div className="marquee-w">
+          <div className="marquee-w pointer-events-none	">
             <div className="marquee font-bebas">
               <span> Foursaken • Foursaken • Foursaken •</span>
             </div>
