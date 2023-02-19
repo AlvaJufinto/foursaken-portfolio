@@ -64,8 +64,8 @@ const Home = () => {
             <div className='flex flex-row justify-between w-[100%] transition max-w-[1270px] h-[100%] max-h-[450px] bg-transparent'>
               { 
                   people.map((person) => (
-                      <div className={`header-img w-[300px] py-[20px] transition duration-500 ease-in-out grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[80px] hover:w-[350px] hover:translate-y-[10px] hover:relative translate-x-[-10px]`}>
-                          <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-500 opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
+                      <div className={`header-img w-[300px] py-[100px] transition duration-1000 ease-in-out grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] hover:relative  hover:z-[5] translate-x-[-10px]`}>
+                          <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-1000 opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
                             <p className="font-semibold">Hi👋, My name is {person.name}</p>
                             <p className="font-semibold">I'm a <span className="text-[#9747FF]">{person.role}</span></p>
                           </div>
@@ -77,7 +77,7 @@ const Home = () => {
           </div>
           <div className="marquee-w pointer-events-none	">
             <div className="marquee font-bebas">
-              <span> Foursaken • Foursaken • Foursaken • </span>
+              <span> Foursaken • Foursaken • Foursaken •</span>
             </div>
             <div className="marquee marquee2 font-bebas">
               <span className="font-bebas">&nbsp;Foursaken • Foursaken • Foursaken • </span>
