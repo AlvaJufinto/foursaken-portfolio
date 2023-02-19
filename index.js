@@ -1,3 +1,5 @@
+
+
 const { useState } = React;
 
 const { Link, Route, HashRouter} = ReactRouterDOM;
@@ -65,13 +67,13 @@ const Home = () => {
             <div className='flex flex-row justify-between w-[100%] transition max-w-[1270px] h-[100%] max-h-[450px] bg-transparent'>
               { 
                   people.map((person) => (
-                      <div className={`header-img w-[300px] py-[100px] transition duration-1000 ease-in-out grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] hover:relative  hover:z-[5] translate-x-[-10px]`}>
-                          <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-1000 opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
-                            <p className="font-semibold">Hi👋, My name is {person.name}</p>
-                            <p className="font-semibold">I'm a <span className="text-[#9747FF]">{person.role}</span></p>
-                          </div>
-                          <img className="transition duration-500 max-h-[30vw]" src={person.image} />
+                    <div className={`header-img w-[300px] py-[100px] transition duration-1000 ease-in-out grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] hover:relative  hover:z-[5] translate-x-[-10px]`}>
+                      <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-1000 opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
+                        <p className="font-semibold">Hi👋, My name is {person.name}</p>
+                        <p className="font-semibold">I'm a <span className="text-[#9747FF]">{person.role}</span></p>
                       </div>
+                      <img className="transition duration-500 max-h-[30vw]" src={person.image} />
+                    </div>
                   ))
               }            
             </div>
@@ -99,6 +101,38 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+          </div>
+        </div>
+        <div className="min-h-[200px] bg-[#15013C] py-[75px]">
+          <div className="mx-auto max-w-[1270px] flex flex-col items-center"> 
+            <div className="flex justify-center gap-[10px] items-center">
+              <img src="./assets/icons/arrow-purple.svg" alt="" />
+              <h3 className="font-sora text-[#FFFFFF] text-[3rem]">Our Project</h3>
+            </div>
+            <div className="py-[115px] flex flex-col gap-[115px]">
+              <div className="flex gap-[100px] items-center">
+                <img src="./assets/img/white-bg.png" />
+                <div>
+                  <p className="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
+                  <p className="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                </div>
+              </div>
+              <div className="flex flex-row-reverse  gap-[100px] items-center">
+                <img src="./assets/img/white-bg.png" />
+                <div>
+                  <p className="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
+                  <p className="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                </div>
+              </div>
+              <div className="flex gap-[100px] items-center">
+                <img src="./assets/img/white-bg.png" />
+                <div>
+                  <p className="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
+                  <p className="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                </div>
+              </div>
+            </div>
+            <button className="h-[95px] w-[264px] rounded-[50px] text-[#FFFFFF] text-[1.5rem] font-sora outline hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-500">More Work</button>
           </div>
         </div>
       </div>

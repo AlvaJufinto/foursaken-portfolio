@@ -4,6 +4,12 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .marquee-w {
     position: absolute;
     display: block;
@@ -50,11 +56,11 @@ body {
 .header-img:hover .card {
     opacity: 1;
     display: block;
-    transform: translate(0vw, -100px);
+    transform: translate(30%, -100px);
 }
 
 .header-img:hover .card.left {
     opacity: 1;
     display: block;
-    transform: translate(-50%, -100px);
+    transform: translate(-100%, -100px);
 }
