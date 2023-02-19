@@ -50,5 +50,11 @@ body {
 .header-img:hover .card {
     opacity: 1;
     display: block;
-    transform: translate(5vw, -7vw);
+    transform: translate(0vw, -100px);
+}
+
+.header-img:hover .card.left {
+    opacity: 1;
+    display: block;
+    transform: translate(-50%, -100px);
 }

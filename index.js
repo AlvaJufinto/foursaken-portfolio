@@ -31,41 +31,51 @@ const App = () => (
 const Home = () => {
     const [index, setIndex] = useState(0);
 
+    const WhiteDot = () => {
+      return (
+        <div className="h-[20px] w-[20px] rounded-[100%] bg-[#FFFFFF]"></div>
+      )
+    }
+
     const people = [
         {
             name: 'Zaidan',
             image: './img/zaidan-transparent.png',
+            cardPosition: 'right',
             role: 'Team Leader',
         },
         {
             name: 'Alva',
             image: './img/alva-transparent.png',
+            cardPosition: 'right',
             role: 'Front-End Developer'
         },
         {
             name: 'Syafiq',
             image: './img/syafiq-transparent.png',
+            cardPosition: 'right',
             role: 'UI/UX Designer'
         },
         {
             name: 'Fajar',
             image: './img/pajar-transparent.png',
+            cardPosition: 'left',
             role: 'Back-End Developer',
         },
     ]
 
    return (
       <div id="content">
-        <div id="header">
-          <div className="flex flex-col w-[100%] overflow-hidden bg-[#C8B5FD] z-[-2] mb-[12rem] items-center justify-evenly gap-[100px]">   
-            <h1 className="font-bold flex text-[26px] text-white mb-[4rem] mt-[8rem]">Creative Code House <img src="./img/cch-vektor.png" className="w-[22px] h-[20px] relative right-[10px] top-[px]" /></h1>
+        <div className="header bg-transparent w-[100%] max-h-[800px]">
+          <div className="flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] mb-[12rem] items-center justify-evenly gap-[100px]">   
+            <h1 className="font-bold text-[26px] text-white mt-[8rem]">Creative Code House <img src="./img/cch-vektor.png" className="w-[22px] h-[20px] relative right-[10px] top-[px]" /></h1>
             <div className='flex flex-row justify-between w-[100%] max-w-[1270px] h-[100%] max-h-[450px] bg-transparent'>
               { 
                   people.map((person) => (
-                      <div className={'header-img relative top-[0px] w-[300px] h-[500%] transition duration-500 grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[70px]  hover:w-[350px] hover:translate-y-[-50px]'}>
-                          <div className="card transition duration-500 opacity-0 absolute right-[0px] translate-y-[20vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
-                            <p>Hi👋, My name is {person.name}</p>
-                            <p>I'm a <span className="text-[#9747FF]">{person.role}</span></p>
+                      <div className={`header-img w-[300px] transition duration-500 grayscale-[100%] hover:grayscale-0 hover:scale-125 translate-y-[70px] hover:w-[350px] hover:translate-y-[-30px] bg-[#9747FF]`}>
+                          <div className={`${person.cardPosition === 'right' ? 'card' : 'card left' } transition duration-500 opacity-0 absolute right-[0px] translate-y-[20vw] bg-[#FFFFFF] p-[20px] rounded-[15px]`}>
+                            <p className="font-semibold">Hi👋, My name is {person.name}</p>
+                            <p className="font-semibold">I'm a <span className="text-[#9747FF]">{person.role}</span></p>
                           </div>
                           <img src={person.image} />
                       </div>
@@ -73,16 +83,15 @@ const Home = () => {
               }            
             </div>
           </div>
-            <div className="marquee-w">
-                <div className="marquee font-bebas">
-                    <span>Foursaken ･ Foursaken ･ Foursaken ･ </span>
-                </div>
-                <div className="marquee marquee2 font-bebas">
-                    <span className="font-bebas">Foursaken ･ Foursaken ･ Foursaken ･ </span>
-                </div>
-              </div>
+          <div className="marquee-w">
+            <div className="marquee font-bebas">
+              <span> Foursaken • Foursaken • Foursaken •</span>
+            </div>
+            <div className="marquee marquee2 font-bebas">
+              <span className="font-bebas">&nbsp;Foursaken • Foursaken • Foursaken • </span>
+            </div>
           </div>
-
+        </div>
           <div className="flex flex-row container font-sora mx-auto px-[8rem] relative bottom-[14rem]">
               <h1 className="max-w-[45rem] text-[36px] text-start font-medium">Our Vision is to <span className="underline text-[#15013C]">Build. Develop. Grow.</span> We help to build world standard of <span className="whitespace-nowrap text-[#9747FF]">Web Developer</span></h1>
               <div className="flex flex-col max-w-[19rem] flex-start relative left-[5.5rem]">
