@@ -9,7 +9,7 @@ const App = () => (
       <nav className="flex justify-center font-semibold text-white mb-[-3rem]">
         <ul className="flex w-[1270px] max-w-[1270px] justify-between ml-10 mr-10 pt-3 font-sora bg-transparent">
           <div className="nav-logo flex">
-            <img src="./assets/img/arrow-navbar.png" className="max-w-[22px] max-h-[20px] relative top-[7.79px] "/>
+            <img src="./assets/icons/arrow-navbar.svg" className="max-w-[22px] max-h-[20px] relative top-[7.79px] "/>
             <li><Link to="/"><h1 className="ml-2 text-[24px]">Foursaken</h1></Link></li>
           </div>
 
