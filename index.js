@@ -89,7 +89,7 @@ const Home = () => {
           <div className="flex flex-col max-w-[19rem] flex-start left-[5.5rem]">
             <p className="text-[20px] font-normal">With our passion in Code, Design, and Build, we make website and app to help your brand stands out. Don't worry about stuff, just leave it to us!</p>
             <div className="relative">
-              <div className="button-about-us w-[200px] h-[200px] mt-[2rem] bg-[#15013C] text-white rounded-full flex justify-center items-center hover:w-[100%] hover:bg-[#230264]">
+              <div className="button-about-us w-[200px] h-[200px] mt-[2rem] bg-[#15013C] text-white rounded-full flex justify-center items-center duration-700 ease-in-out hover:w-[300px] hover:bg-[#230264] hover:w-[100%] hover:bg-[#230264]">
                 About Us
               </div>
               <div className="arrow-about-us absolute top-[50%] translate-y-[10%] right-[20%]">
