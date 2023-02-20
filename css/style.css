@@ -67,6 +67,12 @@ body {
     transform: translate(-55%, -100px);
 }
 
+
+.infinite-carousel-container {
+    background-image: url("./../assets/img/bg-running.png");
+}
+
+
 .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -82,18 +88,35 @@ body {
     height: auto;
 }
 
-.corousel-slide-track {
-    animation: scroll 10s linear infinite;
+.carousel-slide-track {
+    animation: scroll 20s linear infinite;
 }
+
+.carousel-slide-track-2 {
+    animation: scroll-2 20s linear infinite;
+}
+
 
 @keyframes scroll {
     0% {
-        transform: translateX(0);
+        transform: translateX(-50vw);
     }
-    25% {
-        transform: translateX(-25%)
+    50% {
+        transform: translateX(0vw);
     }
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(-50vw);
+    }
+}
+
+@keyframes scroll-2 {
+    0% {
+        transform: translateX(0vw);
+    }
+    50% {
+        transform: translateX(-50vw);
+    }
+    100% {
+        transform: translateX(0vw);
     }
 }
