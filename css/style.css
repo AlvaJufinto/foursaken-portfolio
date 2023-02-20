@@ -66,3 +66,18 @@ body {
     display: block;
     transform: translate(-55%, -100px);
 }
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    width: calc(100% * 4);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
