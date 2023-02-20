@@ -58,11 +58,11 @@ body {
 .header-img:hover .card {
     opacity: 1;
     display: block;
-    transform: translate(30%, -100px);
+    transform: translate(5%, -100px);
 }
 
 .header-img:hover .card.left {
     opacity: 1;
     display: block;
-    transform: translate(-100%, -100px);
+    transform: translate(-55%, -100px);
 }
