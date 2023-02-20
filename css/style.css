@@ -35,10 +35,10 @@ body {
     color: white;
     white-space: nowrap;
     font-size: 10rem;
-    animation: marquee 20s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 .marquee2 span {
-    animation-delay: 10s;
+    animation-delay: 5s;
 }
 @keyframes marquee {
     0% {
