@@ -35,10 +35,10 @@ body {
     color: white;
     white-space: nowrap;
     font-size: 10rem;
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 .marquee2 span {
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 @keyframes marquee {
     0% {
@@ -80,4 +80,20 @@ body {
 .carousel-slide img {
     width: 100%;
     height: auto;
+}
+
+.corousel-slide-track {
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%)
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
 }
