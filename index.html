@@ -5,21 +5,137 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Foursaken Portofolio</title>
-   <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-   <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
-   <link rel="stylesheet" href="style.css">
-   <script src="https://cdn.tailwindcss.com"></script>
-   <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
-   <link rel="stylesheet" href="css/style.css">
+   
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+   
+   <!-- <script src="./libs/tailwind.js"></script> -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- <link rel="stylesheet" href="./css/output.css"> -->
+   
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-   <div id="root"></div>
-   <script src="index.js" type="text/babel">
+   <div id="content">
+      <nav class="flex justify-center font-semibold text-white mb-[-3rem]">
+         <ul class="flex w-[1270px] max-w-[1270px] justify-between ml-10 mr-10 pt-3 font-sora bg-transparent">
+            <div class="nav-logo flex">
+               <img src="./assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
+               <li>
+                  <a href="/">
+                  <h1 class="ml-2 text-[24px]">Foursaken</h1>
+                  </a>
+               </li>
+            </div>
+      
+            <div class="flex justify-end space-x-10 text-[16px] mt-2">
+               <li>
+                  <a href="/">Home</a>
+               </li>
+               <li>
+                  <a href="/work">Work</a>
+               </li>
+               <li>
+                  <a href="/about">About</a>
+               </li>
+               <li>
+                  <a href="/article">Article</a>
+               </li>
+               <li>
+                  <a href="/contact">Contacts</a>
+               </li>
+            </div>
+      
+         </ul>
+      </nav>
+      <div class="bg-transparent w-[100%]">
+         <div class="flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] items-center justify-evenly gap-[100px]">
+            <h1 class="font-bold text-[26px] text-white mt-[8rem] flex">Creative Code House 
+               <!-- <img src="./img/cch-vektor.png" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " /></h1> -->
+            <div
+               class='flex flex-row justify-between w-[100%] transition max-w-[1270px] h-[100%] max-h-[450px] bg-transparent'>
+               <!-- {
+               people.map((person) => ( -->
+               <div class="header-img w-[300px] py-[100px] transition duration-1000 ease-in-out grayscale-[100%]
+                  hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px]
+                  hover:relative hover:z-[5] translate-x-[-10px]">
+                  <div class=" card transition duration-1000
+                     opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
+                     <p class="font-semibold">Hi👋, My name is {person.name}</p>
+                     <p class="font-semibold">I'm a <span class="text-[#9747FF]">{person.role}</span></p>
+                  </div>
+                  <img class="transition duration-500 max-h-[30vw]" src="./assets/img/pajar-transparent.png" />
+               </div>
+            </div>
+         </div>
+         <div class="marquee-w pointer-events-none	">
+            <div class="marquee font-bebas">
+               <span> Foursaken • Foursaken • Foursaken •</span>
+            </div>
+            <div class="marquee marquee2 font-bebas">
+               <span class="font-bebas">&nbsp;Foursaken • Foursaken • Foursaken • </span>
+            </div>
+         </div>
+      </div>
+      <div class="flex flex-row container font-sora mx-auto max-w-[1270px] justify-evenly mt-[10rem] mb-[6rem]">
+         <h1 class="max-w-[45rem] text-[36px] text-start font-medium">Our vision is to <span
+               class="underline text-[#15013C]">Build. Develop. Grow.</span> We help you to build <span
+               class="whitespace-nowrap text-[#9747FF]">your dream world</span> with professional standard.</h1>
+         <div class="flex flex-col max-w-[19rem] flex-start">
+            <p class="text-[20px] font-normal">With our passion in Code, Design, and Build, we make website and app to
+               help your brand stands out. Don't worry about stuff, just leave it to us!</p>
+            <div class="relative">
+               <Link to="/about">
+               <div
+                  class="w-[200px] h-[200px] mt-[2rem] bg-[#15013C] text-white rounded-full flex justify-center items-center duration-700 ease-in-out hover:w-[300px] hover:bg-[#230264] relative group">
+                  <span class="transition-opacity duration-700 ease-in-out group-hover:opacity-100">About Us</span>
+                  <span
+                     class="absolute transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
+                     <img src="./assets/icons/arrow-forward.svg" />
+                  </span>
+               </div>
+               </Link>
+            </div>
+         </div>
+      </div>
+      <div class="min-h-[200px] bg-[#15013C] py-[75px]">
+         <div class="mx-auto max-w-[1270px] flex flex-col items-center">
+            <div class="flex justify-center gap-[10px] items-center">
+               <img src="./assets/icons/arrow-purple.svg" alt="" />
+               <h3 class="font-sora text-[#FFFFFF] text-[3rem]">Our Project</h3>
+            </div>
+            <div class="py-[115px] flex flex-col gap-[115px]">
+               <div class="flex gap-[100px] items-center">
+                  <img src="./assets/img/white-bg.png" />
+                  <div>
+                     <p class="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
+                     <p class="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                  </div>
+               </div>
+               <div class="flex flex-row-reverse  gap-[100px] items-center">
+                  <img src="./assets/img/white-bg.png" />
+                  <div>
+                     <p class="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
+                     <p class="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                  </div>
+               </div>
+               <div class="flex gap-[100px] items-center">
+                  <img src="./assets/img/white-bg.png" />
+                  <div>
+                     <p class="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
+                     <p class="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                  </div>
+               </div>
+            </div>
+            <button
+               class="h-[95px] w-[264px] rounded-[50px] text-[#FFFFFF] text-[1.5rem] font-sora outline hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-500">More
+               Work</button>
+         </div>
+      </div>
+   </div>
+   <!-- <script src="index.js" type="text/babel">
          
-   </script>
+   </script> -->
 </body>
 </html>
