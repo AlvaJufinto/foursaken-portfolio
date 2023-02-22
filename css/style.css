@@ -88,12 +88,12 @@ body {
 
 .carousel-container {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .carousel-slide {
     display: flex;
-    width: calc(100% * 4);
+    /* width: calc(100% * 4); */
 }
 
 .carousel-slide img {
@@ -112,24 +112,24 @@ body {
 
 @keyframes scroll {
     0% {
-        transform: translateX(-50vw);
+        transform: translateX(-15vw);
     }
     50% {
-        transform: translateX(0vw);
+        transform: translateX(15vw);
     }
     100% {
-        transform: translateX(-50vw);
+        transform: translateX(-15vw);
     }
 }
 
 @keyframes scroll-2 {
     0% {
-        transform: translateX(0vw);
+        transform: translateX(15vw);
     }
     50% {
-        transform: translateX(-50vw);
+        transform: translateX(-15vw);
     }
     100% {
-        transform: translateX(0vw);
+        transform: translateX(15vw);
     }
 }
