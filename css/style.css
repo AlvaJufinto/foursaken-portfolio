@@ -86,21 +86,6 @@ body {
 }
 
 
-.carousel-container {
-    width: 100%;
-    /* overflow: hidden; */
-}
-
-.carousel-slide {
-    display: flex;
-    /* width: calc(100% * 4); */
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: auto;
-}
-
 .carousel-slide-track {
     animation: scroll 20s linear infinite;
 }
@@ -112,24 +97,24 @@ body {
 
 @keyframes scroll {
     0% {
-        transform: translateX(-15vw);
+        transform: translateX(-25vw);
     }
     50% {
-        transform: translateX(15vw);
+        transform: translateX(25vw);
     }
     100% {
-        transform: translateX(-15vw);
+        transform: translateX(-25vw);
     }
 }
 
 @keyframes scroll-2 {
     0% {
-        transform: translateX(15vw);
+        transform: translateX(25vw);
     }
     50% {
-        transform: translateX(-15vw);
+        transform: translateX(-25vw);
     }
     100% {
-        transform: translateX(15vw);
+        transform: translateX(25vw);
     }
 }
