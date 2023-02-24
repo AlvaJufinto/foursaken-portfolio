@@ -24,8 +24,8 @@
    <!-- preloader -->
    <div id="content">
       <!-- NAVBAR -->
-      <nav class="flex justify-center font-semibold text-white mb-[-3rem]">
-         <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 pt-3 font-sora bg-transparent">
+      <nav class="navbar fixed top-[0] left-[0] w-[100vw] z-[10] flex justify-center font-semibold text-white mb-[-3rem]">
+         <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 py-[20px] font-sora bg-transparent">
             <div class="nav-logo flex">
                <img src="./assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
                <li>
@@ -36,18 +36,13 @@
             </div>
       
             <div class="flex justify-end space-x-10 text-[16px] mt-2">
-               <li>
+               <li class="relative">
                   <a href="/">Home</a>
+                  <div class="absolute top-[30px] left-[40%] h-[10px] w-[10px] rounded-[50%] bg-[#FFFFFF]"></div>
                </li>
-               <!-- <li>
-                  <a href="/work">Work</a>
-               </li> -->
                <li>
                   <a href="/pages/about.html">About</a>
                </li>
-               <!-- <li>
-                  <a href="/article">Article</a>
-               </li> -->
                <li>  
                   <a href="./pages/contact.html">Contact</a>
                </li>
@@ -72,7 +67,7 @@
                      <p class="font-semibold">Hi👋, My name is Zaidan</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">Team Leader</span></p>
                   </div>
-                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/zaidan-transparent.png" />
+                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/people/zaidan-transparent.png" />
                </div>
                <div class="header-img w-[300px] py-[100px] duration-[800ms] ease-in-out grayscale-[100%]
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
@@ -82,7 +77,7 @@
                      <p class="font-semibold">Hi👋, My name is Alva</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">Front-End Developer</span></p>
                   </div>
-                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/alva-transparent.png" />
+                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/people/alva-transparent.png" />
                </div>
                <div class="header-img w-[300px] py-[100px] duration-[800ms] ease-in-out grayscale-[100%]
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
@@ -92,7 +87,7 @@
                      <p class="font-semibold">Hi👋, My name is Syafiq</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">UI/UX Designer</span></p>
                   </div>
-                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/syafiq-transparent.png" />
+                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/people/syafiq-transparent.png" />
                </div>
                <div class="header-img w-[300px] py-[100px] duration-[800ms] ease-in-out grayscale-[100%]
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
@@ -102,7 +97,7 @@
                      <p class="font-semibold">Hi👋, My name is Fajar</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">Back-End Developer</span></p>
                   </div>
-                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/pajar-transparent.png" />
+                  <img class="transition duration-500 max-h-[40vw]" src="./assets/img/people/fajar-transparent.png" />
                </div>
             </div>
          </div>
@@ -119,8 +114,7 @@
       <div class="flex flex-row container font-sora mx-auto max-w-[1215px] justify-evenly mt-[10rem] mb-[10rem]">
          <h1 class="max-w-[45rem] text-[36px] text-start font-medium">
             Our vision is to <span
-               class="underline text-[#15013C]">Build. Develop. Grow.</span> Bringing <span
-               class="whitespace-nowrap text-[#9747FF]">your</span> digital dreams to reality with professionalism</h1>
+               class="underline text-[#15013C]">Build. Develop. Grow.</span> Bringing your digital dreams to reality with professionalism</h1>
          <div class="flex flex-col max-w-[19rem] flex-start">
             <p class="text-[20px] font-normal">With our passion in Code, Design, and Build, we make website and app to
                help your brand stands out. Don't worry about stuff, just leave it to us!</p>
@@ -141,34 +135,34 @@
       <!-- END GREETING -->
       
       <!-- INFINITE carousel -->
-      <div class="overflow-hidden infinite-carousel-container flex flex-col gap-[50px]">
+      <div class="infinite-carousel-container flex flex-col gap-[50px]">
          <div class="flex gap-[50px] container mx-auto carousel-slide-track">
-            <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-               <img class="object-cover h-[100%] w-[100%] h-[100%] w-[100%]" src="./assets/img/labra-img.png" alt="Image 1">
+            <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+               <img class=" object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
             </div>
-            <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-               <img class="object-cover h-[100%] w-[100%]" src="./assets/img/peminjaman-aula.png" alt="Image 1">
+            <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/peminjaman-aula.png" alt="Image 1">
             </div>
-            <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-               <img class="object-cover h-[100%] w-[100%]" src="./assets/img/Ingfokan-pkl.png" alt="Image 1">
+            <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/ingfokan-pkl.png" alt="Image 1">
             </div>
-            <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-               <img class="object-cover h-[100%] w-[100%]" src="./assets/img/sija-26-img.png" alt="Image 1">
+            <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/sija-26-img.png" alt="Image 1">
             </div>
          </div>
          <div class="carousel-container w-auto">
             <div class="flex gap-[50px]  container mx-auto carousel-slide-track-2">
-               <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-                  <img class="object-cover h-[100%] w-[100%]" src="./assets/img/libraerity-img.png" alt="Image 1">
+               <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+                  <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/libraerity-img.png" alt="Image 1">
                </div>
-               <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-                  <img class="object-cover h-[100%] w-[100%]" src="./assets/img/labra-img-2.png" alt="Image 1">
+               <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+                  <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/ardtech-img.png" alt="Image 1">
                </div>
-               <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-                  <img class="object-cover h-[100%] w-[100%]" src="./assets/img/labra-img.png" alt="Image 1">
+               <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+                  <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
                </div>
-               <div class="carousel-slide bg-[#D2D2D2] w-[600px] ">
-                  <img class="object-cover h-[100%] w-[100%]" src="./assets/img/labra-img.png" alt="Image 1">
+               <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+                  <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
                </div>
             </div>
          </div>
@@ -184,26 +178,29 @@
             </div>
             <div class="py-[115px] flex flex-col gap-[115px]">
                <div class="flex gap-[100px] items-center">
-                  <img class="w-[600px] h-[300px] object-cover" src="./assets/img/labra-img.png" />
+                  <img class="min-w-[545px] h-[300px] object-cover" src="./assets/img/projects/labra-img.png" />
                   <div>
                      <p class="font-sora text-white font-semibold text-[2rem]">Labra V.22</p>
                      <p class="font-sora text-white font-light text-[1.5rem]">
-                        Labra is a radio IP product developed by an Indonesian company. We were responsible for designing and building the landing page to effectively showcase its features and benefits and promote the brand.
+                        Labra is a radio IP product developed by an Indonesian company. We were responsible for designing and building the landing page.
                      </p>
                   </div>
                </div>
-               <div class="flex flex-row-reverse  gap-[100px] items-center">
-                  <img src="./assets/img/gray-bg.png" />
+               <div class=" flex flex-row-reverse gap-[100px] items-center">
+                  <img class="min-w-[545px] h-[300px] object-cover object-top"  src="./assets/img/projects/ardtech-img.png" />
                   <div>
-                     <p class="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
-                     <p class="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                     <p class="font-sora text-white text-right font-semibold text-[2rem]">ARD Tech</p>
+                     <p class="font-sora text-white text-right font-light text-[1.5rem]">ARD Tech, a dynamic IoT company based in Indonesia, has entrusted us with the task of designing and developing their
+                     impactful landing page and seamless e-commerce platform.</p>
                   </div>
                </div>
                <div class="flex gap-[100px] items-center">
-                  <img src="./assets/img/gray-bg.png" />
+                  <img class="min-w-[545px] h-[300px] object-cover object-top" src="./assets/img/projects/Ingfokan-pkl.png" />
                   <div>
-                     <p class="font-sora text-white font-semibold text-[2rem]">Nike 2022 Website</p>
-                     <p class="font-sora text-white font-light text-[2rem]">Build for engage 1232321</p>
+                     <p class="font-sora text-white font-semibold text-[2rem]">IngfokanPKL</p>
+                     <p class="font-sora text-white font-light text-[1.5rem]">
+                           IngfokanPKL is an online platform specifically designed to help individuals search and find relevant information on internships. The website was developed in response to a request from SMKN 26 Jakarta, our school.
+                     </p>
                   </div>
                </div>
             </div>
@@ -229,7 +226,7 @@
                
                <div class="flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition duration-700 ease-in-out hover:-translate-y-[15px]">
                   <img class="h-[400px] w-[100%] object-cover"  src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png" alt="">
-                  <div class="flex flex-col gap-[10px]">
+                  <div class="flex flex-col gap-[10px] flex-1">
                      <h1 class=" text-[1.5rem] font-semibold">Iterasi Array Pada Pemrograman Ruby Menggunakan Select, Reject, dan Delete</h1>
                      <p class=" text-[1rem] text-[#757575]">Sebagai beginner di Ruby, untuk Iterasi array di ruby ada bermacam — macam, namun yang ingin saya share di sini antara lain adalah meth...</p>
                   </div>
@@ -249,19 +246,20 @@
                </div>
 
                <div class="flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition duration-700 ease-in-out hover:-translate-y-[15px]">
-                  <img class="h-[400px] w-[100%] object-cover"  src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png" alt="">
-                  <div class="flex flex-col gap-[10px]">
-                     <h1 class=" text-[1.5rem] font-semibold">Iterasi Array Pada Pemrograman Ruby Menggunakan Select, Reject, dan Delete</h1>
-                     <p class=" text-[1rem] text-[#757575]">Sebagai beginner di Ruby, untuk Iterasi array di ruby ada bermacam — macam, namun yang ingin saya share di sini antara lain adalah meth...</p>
+                  <img class="h-[400px] w-[100%] object-cover"  src="https://miro.medium.com/v2/resize:fit:720/0*E5_d4aeDR3x_ZcGH" alt="">
+                  <div class="flex flex-col gap-[10px] flex-1">
+                     <h1 class=" text-[1.5rem] font-semibold">Be A Leader. Not A Boss</h1>
+                     <p class=" text-[1rem] text-[#757575]">Do you ever feel like your team isn't working properly, can’t work together and they work by themself? thus, what are
+                     you going to do as a...</p>
                   </div>
                   <div class="flex justify-between w-[100%] items-center">
                      <div class="flex items-center gap-[10px]">
-                        <img src="https://miro.medium.com/fit/c/176/176/1*HgKKyG0nQ3V4tj93V8UrYg.jpeg" class="rounded-[50%] h-[50px] w-[50px]">
-                        <p class="article-date ">Fajar Mulyo Setyawan</p>
+                        <img src="./assets/img/people/zaidan-img.jpg" class="rounded-[50%] object-cover h-[50px] w-[50px]">
+                        <p class="article-date ">Zaidan Adli Anandra</p>
                      </div>
-                     <p class="">10 days ago</p>
+                     <p class="">2 days ago</p>
                   </div>
-                  <a href="https://medium.com/@fajarmulyos/iterasi-array-pada-pemrograman-ruby-menggunakan-select-reject-dan-delete-30c4d5e99c8c" target="_blank">
+                  <a class="justify-self-end bg-[#00000]" href="https://medium.com/@zaidanadli83/be-a-leader-not-a-boss-f3e62bad7698" target="_blank">
                      <button 
                         class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms]">
                         Read More
@@ -290,7 +288,7 @@
             <div class="flex align-center justify-center flex-col">
                <div class="relative h-[1px] w-[67.5rem] bg-[#FFFFFF] top-[20px]"></div>
                <a href="./pages/contact.html">
-                  <div class="rounded-full w-[200px] relative translate-y-[-80px] ml-[52rem] h-[200px] bg-[#5417CF] transition-all duration-[500ms] flex justify-center items-center hover:w-[250px] hover:bg-[#230264] hover:bg-[#230264] group">
+                  <div class="rounded-full w-[200px] relative translate-y-[-80px] ml-[52rem] h-[200px] bg-[#5417CF] transition-all duration-[500ms] flex justify-center items-center hover:w-[250px] hover:bg-[#230264] group">
                      <span class="transition-all duration-700 ease-in-out group">Contact Us</span>
                      <span
                         class="group-hover absolute transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
@@ -310,8 +308,7 @@
                </button>
             </div>
 
-            <div class="flex flex-row py-[77px] gap-[600px]">
-
+            <div class="flex flex-row py-[77px] gap-[150px]">
                <div id="alamat" class="flex flex-col align-start gap-[32px] w-[19.5rem]">
                   <div class="flex flex-row justify-between">
                      <h1 class="text-[24px] font-semibold">Meet With Us At</h1>
@@ -326,12 +323,12 @@
                   </div>   
                </div>
 
-               <div id="pages" class="flex flex-col font-sora text-right justify-between ">
+               <div id="pages" class="flex flex-col font-sora justify-between ">
                   <h1 class="font-semibold text-[24px]">Pages</h1>
                   <ul class="flex flex-col text-[16px] gap-[16px]">
                      <li><a href="/">Home</a></li>
                      <li><a href="./pages/about.html">About</a></li>
-                     <li><a href="./pages/contact.html">Contacts</a></li>
+                     <li><a href="./pages/contact.html">Contact Us</a></li>
                   </ul>
                </div>
 
