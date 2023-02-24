@@ -17,6 +17,11 @@
    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+   <!-- preloader -->
+   <div id="preloader">
+      <img src="./assets/video/in 5s.gif?t=0" alt=""  class="w-[100vw] h-[100vh]">
+   </div>
+   <!-- preloader -->
    <div id="content">
       <!-- NAVBAR -->
       <nav class="flex justify-center font-semibold text-white mb-[-3rem]">
@@ -55,7 +60,7 @@
       <!-- JUMBOTRON -->
       <div class="bg-transparent w-[100%]">
          <div class="bg-fixed jumbotron bg-no-repeat bg-center bg-cover h-[100vh] flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] items-center justify-end gap-[100px]">
-            <h1 class="absolute top-[10%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
+            <h1 class="relative top-[10%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
                <img src="./assets/icons/arrow-forward.svg" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " /></h1>
             <div
                class='flex flex-row justify-between w-[100%] transition transition-transform ease-in-out max-w-[1215px] h-[100%] max-h-[450px]'>
@@ -337,8 +342,13 @@
       <!-- END FOOTER -->
 
    </div>
-   <script src="index.js" type="text/babel">
-         
-   </script>
+   <script>
+      window.onload = function() {
+        setTimeout(function() {
+          document.getElementById("preloader").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 4500); 
+      };
+    </script>
 </body>
 </html>
