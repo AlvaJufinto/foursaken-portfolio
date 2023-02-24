@@ -24,10 +24,10 @@
    <!-- preloader -->
    
    <!-- NAVBAR -->
-   <nav class="flex justify-center font-semibold text-white mb-[-3rem]">
-      <ul class="flex w-[1270px] max-w-[1270px] justify-between ml-10 mr-10 pt-3 font-sora bg-transparents">
+   <nav class="navbar fixed top-[0] left-[0] w-[100vw] z-[10] h-[70px] flex justify-center items-center font-semibold text-white">
+      <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 font-sora bg-transparent">
          <div class="nav-logo flex">
-            <img src="../assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
+            <img src="./../assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
             <li>
                <a href="/">
                <h1 class="ml-2 text-[24px]">Foursaken</h1>
@@ -37,21 +37,20 @@
    
          <div class="flex justify-end space-x-10 text-[16px] mt-2">
             <li>
-               <a href="/">Home</a>
+               <a href="./../index.html">Home</a>
             </li>
             <li class="relative">
-               <a href="/pages/about.html">About</a>
-               <div class="absolute top-[35px] left-[40%] h-[10px] w-[10px] rounded-[50%] bg-[#FFFFFF]"></div>
+               <a href="./about.html">About</a>
+               <div class="absolute top-[30px] left-[40%] h-[10px] w-[10px] rounded-[50%] bg-[#FFFFFF]"></div>
             </li>
             <li>  
-               <a href="/pages/contact.html">Contact</a>
+               <a href="./contact.html">Contact</a>
             </li>
          </div>
-
+   
       </ul>
    </nav>
    <!-- END NAVBAR -->
-
    <!-- HEADER -->
    <div class="w-[100%] font-sora text-white bg-no-repeat bg-cover h-[100vh] flex flex-col overflow-hidden z-[-2] items-center" style="background-image: url('../assets/img/backgrounds/sija-bg.png');">
       <div class="flex flex-col items-center max-w-[1100px] justify-between mt-[185px] font-sora bg-transparents bg-[#00000]">
@@ -69,7 +68,7 @@
 
    <!-- About Us Description -->
    <div class="about-us-description h-[430px] bg-center flex items-center justify-center">
-      <p class="text-[2rem] text-[#15013C] w-[860px] text-medium font-sora text-center">
+      <p class="text-[2rem] text-[#15013C] w-[860px] font-light font-sora text-center">
          Our team is made up of 4 talented individuals who share a passion for developing high quality of Digital Products. From Design to Code, we work together to bring you the best products possible.
       </p>
    </div>
@@ -78,45 +77,117 @@
    <!-- OUR TEAM -->
    <div class="py-[8rem] bg-[#15013C] text-white flex flex-col">
       <h1 class="font-sora font-bold align-center justify-center flex text-[4rem]">Our Team</h1>
+      
       <div class="flex flex-col container mx-auto mt-[105px] gap-[70px]">
-         <div class="flex flex-row gap-[72px] justify-center items-center">
-            <img src="../assets/img/people/zaidan-profile.png" class="w-[221px]">
-            <div class="flex flex-col flex-wrap max-w-[650px]">
-               <h1 class="font-sora text-[40px] font-bold">Zaidan Adli Anandra</h1>
-               <p class="font-sora text-[24px]">Team Lead</p>
-               <p class="font-sora font-[15px] leading-[22px]">“I am interested in learning technology, with a passion for Business, Entrepreneurship, and Design, come up with a talent for Critical thinking, Thinking outside the box, and coming up with innovative ideas and designs.”</p>
+         <div class="about-zaidan flex flex-row gap-[100px] justify-center items-center">
+            <img class="img-zaidan w-[221px] transition-all ease-in-out duration-[500] " src="../assets/img/people/zaidan-profile.png">
+            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+               <div class="">
+                  <h1 class="font-sora text-[40px] font-bold">Zaidan Adli Anandra</h1>
+                  <p class="font-sora text-[24px]">Team Lead</p>
+               </div>
+               <p class="font-sora font-[15px] font-light leading-[22px] text-[1rem]">“I am interested in learning technology, with a passion for Business, Entrepreneurship, and Design, come up with a talent for Critical thinking, Thinking outside the box, and coming up with innovative ideas and designs.”</p>
             </div>
          </div>
 
-         <div class="flex flex-row gap-[72px] justify-center items-center">
-            <img src="../assets/img/people/alva-profile.png" class="w-[221px]">
-            <div class="flex flex-col flex-wrap max-w-[650px]">
-               <h1 class="font-sora text-[40px] font-bold">Stanislaus Alva Jufinto</h1>
-               <p class="font-sora text-[24px]">Front-End Developer</p>
-               <p class="font-sora font-[15px] leading-[22px]">“I'm a passionate frontend developer with strong problem-solving abilities and a passion for creating visually appealing user interfaces. I have almost three years of coding experience and am constantly seeking new challenges to improve my skills.”</p>
+         <div class="about-alva flex flex-row gap-[100px] justify-center items-center">
+            <img class="w-[221px] transition-all ease-in-out duration-[500]" src="../assets/img/people/alva-profile.png">
+            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+               <div>
+                  <h1 class="font-sora text-[40px] font-bold">Stanislaus Alva Jufinto</h1>
+                  <p class="font-sora text-[24px]">Front-End Developer</p>
+               </div>
+                  <p class="font-sora font-[15px] font-light leading-[22px]">“I'm a passionate frontend developer with strong problem-solving abilities and a passion for creating visually appealing user interfaces. I have almost three years of coding experience and am constantly seeking new challenges to improve my skills.”</p>
             </div>
          </div>
 
-         <div class="flex flex-row gap-[72px] justify-center items-center">
-            <img src="../assets/img/people/syafiq-profile.png" class="w-[221px]">
-            <div class="flex flex-col flex-wrap max-w-[650px]">
-               <h1 class="font-sora text-[40px] font-bold">Muhammad Fadillah Syafiq</h1>
-               <p class="font-sora text-[24px]">UI/UX Designer</p>
-               <p class="font-sora font-[15px] leading-[22px]">“I am a student who has an interest in learning and always ready to take responsibility, I’m good at graphic design and UI/UX Design, that’s why i want to be an UI/UX Designer, and I also like music.”</p>
+         <div class="about-syafiq flex flex-row gap-[100px] justify-center items-center">
+            <img class="w-[221px] transition-all ease-in-out duration-[500]" src="../assets/img/people/syafiq-profile.png">
+            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+               <div>
+                  <h1 class="font-sora text-[40px] font-bold">Muhammad Fadillah Syafiq</h1>
+                  <p class="font-sora text-[24px]">UI/UX Designer</p>
+               </div>
+               <p class="font-sora font-[15px] font-light leading-[22px]">“I am a student who has an interest in learning and always ready to take responsibility, I’m good at graphic design and UI/UX Design, that’s why i want to be an UI/UX Designer, and I also like music.”</p>
             </div>
          </div>
-         <div class="flex flex-row gap-[72px] justify-center items-center">
-            <img src="../assets/img/people/fajar-profile.png" class="w-[221px]">
-            <div class="flex flex-col flex-wrap max-w-[650px]">
-               <h1 class="font-sora text-[40px] font-bold">Fajar Mulyo Setyawan</h1>
-               <p class="font-sora text-[24px]">Back-End Developer</p>
-               <p class="font-sora font-[15px] leading-[22px]">“As a student, I'm passionate about backend development and experienced in PHP, Ruby, Python, JavaScript, Laravel, and Ruby on Rails. I enjoy collaborating and taking on challenges, and use my free time to learn new things and play games.”</p>
+         <div class="about-fajar flex flex-row gap-[100px] justify-center items-center">
+            <img class="w-[221px] transition-all ease-in-out duration-[500] " src="../assets/img/people/fajar-profile.png">
+            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+               <div>
+                  <h1 class="font-sora text-[40px] font-bold">Fajar Mulyo Setyawan</h1>
+                  <p class="font-sora text-[24px]">Back-End Developer</p>
+               </div>
+               <p class="font-sora font-[15px] font-light leading-[22px]">“As a student, I'm passionate about backend development and experienced in PHP, Ruby, Python, JavaScript, Laravel, and Ruby on Rails. I enjoy collaborating and taking on challenges, and use my free time to learn new things and play games.”</p>
             </div>
          </div>
       </div>
    </div>
    <!-- ENDS OUR TEAM -->
 
+   <!-- FOOTER -->
+   <div id="footer" class="bg-[#15013C] font-sora text-white">
+      <div class="mx-auto max-w-[1215px] flex flex-col items-center px-[77px] pt-[162px]">
+
+         <div class="flex flex-col">
+            <div class="w-[40rem] text-[6rem] font-semibold  items-self-start">
+               <h1 class="ml-[6.4rem] ">Let’s work </h1>
+               <span class="relative bottom-[2rem]">Together!</span>
+            </div>
+            <div class="flex align-center justify-center flex-col">
+               <div class="relative h-[1px] w-[1128px] bg-[#FFFFFF] top-[20px]"></div>
+               <a href="./pages/contact.html">
+                  <div class="rounded-full w-[200px] relative translate-y-[-80px] ml-[842px] h-[200px] bg-[#5417CF] transition-all duration-[500ms] flex justify-center items-center hover:w-[286px] hover:bg-[#230264] group">
+                     <span class="transition-all duration-700 ease-in-out group">Contact Us</span>
+                     <span
+                        class="group-hover absolute transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
+                        <img src="./assets/icons/arrow-button.svg" />
+                     </span>
+                  </div>
+               </a>
+            </div>
+            <div class="flex gap-[40px] translate-y-[-100px]">
+               <button
+                  class="rounded-[50px] px-[50px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  contact@foursaken.com
+               </button>
+               <button
+                  class="rounded-[50px] px-[50px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  +62 896 0194 3530
+               </button>
+            </div>
+         </div>
+
+         <div class="flex flex-col justify-center align-center items-center py-[77px] gap-[150px]">
+
+            <div id="pages" class="flex flex-col font-sora justify-between ">
+               <ul class="flex flex-col text-[32px] items-center gap-[16px]">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="./pages/about.html">About</a></li>
+                  <li><a href="./pages/contact.html">Contact Us</a></li>
+               </ul>
+            </div>
+
+            <div id="alamat" class="flex flex-col align-center items-center justify-center gap-[32px] w-fit">
+               <h1 class="text-[36px] font-sora font-semibold ">Socialize With Social</h1>
+               <div class="flex flex-row justify-between align-center gap-[78px]">
+                  <a href=""><img src="./../assets/icons/linkdln.svg" alt=""></a>
+                  <a href=""><img src="./../assets/icons/instagram.svg" alt=""></a>
+                  <a href=""><img src="./../assets/icons/email.svg" alt=""></a>
+                  <a href=""><img src="./../assets/icons/youtube.svg" alt=""></a>
+               </div>   
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-[32px] font-inter ">
+               <p class="text-[24px] font-light">© 2023 Foursaken. All rights reserved.</p>
+               <p class="font-semibold text-[24px]">Made with 💜 by Team</p>
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+   <!-- END FOOTER -->
 
    <script src="./../index.js">
          

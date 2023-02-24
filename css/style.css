@@ -22,7 +22,7 @@ body {
 }
 
 .jumbotron {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("./../assets/img/backgrounds/liquid-bg.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("./../assets/img/backgrounds/jumbotron-bg.png");
 }
 
 .marquee-w {
@@ -136,4 +136,20 @@ body {
 
 .about-us-description {
     background-image: url("./../assets/img/backgrounds/about-img.png");
+}
+
+.about-zaidan:hover img {
+    filter: drop-shadow(0px 0px 10rem #C8B5FD);
+}
+
+.about-alva:hover img {
+    filter: drop-shadow(0px 0px 10rem #6EE7B7);
+}
+
+.about-syafiq:hover img {
+    filter: drop-shadow(0px 0px 10rem #F9A8D4);
+}
+
+.about-fajar:hover img {
+    filter: drop-shadow(0px 0px 10rem #FCD34D);
 }
