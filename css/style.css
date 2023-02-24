@@ -130,6 +130,19 @@ body {
     }
 }
 
-#preloader.fade {
-    display: none;
-}
+#preloader.hide {
+    animation: fade-out 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
