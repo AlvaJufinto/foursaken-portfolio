@@ -13,7 +13,7 @@ body {
 }
 
 .jumbotron {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(./../assets/img/liquid-bg.png);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("./../assets/img/backgrounds/liquid-bg.png");
 }
 
 .marquee-w {
@@ -82,7 +82,7 @@ body {
 
 
 .infinite-carousel-container {
-    background-image: url("./../assets/img/bg-running.png");
+    background-image: url("./../assets/img/backgrounds/bg-running.png");
 }
 
 
