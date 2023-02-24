@@ -6,7 +6,7 @@ window.onload = function() {
     setTimeout(function() {
         preloader.classList.add("hide");
         content.style.display = "block";
-    }, 3000);
+    }, 0);
     
       // add an event listener for the end of the animation
       preloader.addEventListener("animationend", function() {
@@ -17,3 +17,26 @@ window.onload = function() {
         video.play();
       });
   };
+
+function articleShow() {
+  const articles = document.querySelectorAll('.article');
+  const moreButton = document.querySelector('.article-button');
+
+  console.log(articles);
+
+  moreButton.addEventListener('click', () => {
+    articles.forEach((article) => {
+      article.classList.toggle('hidden')
+    })
+
+    if(moreButton.innerText  === "More") {
+      moreButton.innerText  = "Less"
+    } else {
+      moreButton.innerText  = "More"
+    }
+  })
+
+
+}
+
+articleShow()

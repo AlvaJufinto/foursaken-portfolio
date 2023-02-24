@@ -130,6 +130,10 @@ body {
     }
 }
 
+.article.hidden {
+    display: none;
+}
+
 #preloader.fade {
     display: none;
 }
