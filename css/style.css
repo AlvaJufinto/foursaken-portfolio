@@ -76,7 +76,9 @@ body {
 .font-bebas {
     font-family: 'Bebas Neue', cursive;
 }
-
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
 .header-img:hover .card {
     opacity: 1;
     display: block;
