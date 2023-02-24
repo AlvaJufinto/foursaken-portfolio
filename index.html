@@ -19,9 +19,10 @@
 <body>
    <!-- preloader -->
    <div id="preloader">
-      <img src="./assets/video/in 5s.gif?t=0" alt=""  class="w-[100vw] h-[100vh]">
+      <img src="./assets/video/foursaken-preload.gif?t=0" alt=""  class="object-cover object-center w-[100vw] h-[100vh]">
    </div>
    <!-- preloader -->
+   
    <div id="content">
       <!-- NAVBAR -->
       <nav class="navbar fixed top-[0] left-[0] w-[100vw] z-[10] flex justify-center font-semibold text-white mb-[-3rem]">
@@ -138,7 +139,7 @@
       <div class="infinite-carousel-container flex flex-col gap-[50px]">
          <div class="flex gap-[50px] container mx-auto carousel-slide-track">
             <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
-               <img class=" object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
+               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
             </div>
             <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
                <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/peminjaman-aula.png" alt="Image 1">
@@ -178,7 +179,7 @@
             </div>
             <div class="py-[115px] flex flex-col gap-[115px]">
                <div class="flex gap-[100px] items-center">
-                  <img class="min-w-[545px] h-[300px] object-cover" src="./assets/img/projects/labra-img.png" />
+                  <img class="min-w-[545px] h-[300px] object-cover object-top" src="./assets/img/projects/labra-img.png" />
                   <div>
                      <p class="font-sora text-white font-semibold text-[2rem]">Labra V.22</p>
                      <p class="font-sora text-white font-light text-[1.5rem]">
@@ -339,13 +340,8 @@
       <!-- END FOOTER -->
 
    </div>
-   <script>
-      window.onload = function() {
-        setTimeout(function() {
-          document.getElementById("preloader").style.display = "none";
-          document.getElementById("content").style.display = "block";
-        }, 4500); 
-      };
+   <script src="./index.js">
+      
     </script>
 </body>
 </html>
