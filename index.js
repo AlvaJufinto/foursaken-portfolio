@@ -6,7 +6,7 @@ window.onload = function() {
     setTimeout(function() {
         preloader.classList.add("hide");
         content.style.display = "block";
-    }, 3000);
+    }, 2900);
     
       // add an event listener for the end of the animation
       preloader.addEventListener("animationend", function() {

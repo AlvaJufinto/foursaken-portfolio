@@ -131,7 +131,7 @@ body {
 }
 
 #content {
-    /* display: none; */
+    display: none;
 }
 
 #preloader.hide {
