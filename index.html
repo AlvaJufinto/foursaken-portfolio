@@ -22,7 +22,7 @@
    </div> -->
    <!-- preloader -->
    
-   <div id="content">
+   <div id="content/">
       <!-- NAVBAR -->
       <nav class="navbar sticky top-[0] left-[0] w-[100vw] z-[10] h-[70px] flex justify-center items-center font-semibold text-white">
          <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 font-sora bg-transparent">
@@ -47,18 +47,23 @@
                   <a href="./pages/contact.html">Contact</a>
                </li>
             </div>
-      
+            <div class="hidden md:flex flex-col gap-[5px] rounded-[50%] items-center justify-center h-[35px] w-[35px] bg-[#9747FF]">
+               <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
+               <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
+               <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
+            </div>
          </ul>
       </nav>
       <!-- END NAVBAR -->
 
       <!-- JUMBOTRON -->
-      <div class="bg-transparent w-[100%] relative bottom-[70px]">
-         <div class="bg-fixed jumbotron bg-no-repeat bg-center bg-cover h-[100vh] flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] items-center justify-end gap-[100px]">
-            <h1 class="relative top-[10%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
-               <img src="./assets/icons/arrow-forward.svg" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " /></h1>
+      <div class="bg-transparent relative bottom-[70px]">
+         <div class="bg-fixed jumbotron bg-center bg-cover bg-no-repeat h-[100vh] flex flex-col overflow-hidden z-[-2] items-center justify-end gap-[100px]">
+            <h1 class="absolute top-[0%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
+               <img src="./assets/icons/arrow-forward.svg" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " />
+            </h1>
             <div
-               class='flex flex-row justify-between w-[100%] transition transition-transform ease-in-out max-w-[1215px] h-[100%] max-h-[450px]'>
+               class='flex flex-row justify-between w-[100%] transition transition-transform ease-in-out max-w-[1215px] h-[100%] max-h-[450px] lg:hidden'>
                <div class="header-img w-[300px] py-[100px] duration-[800ms] ease-in-out grayscale-[100%]
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
                    translate-x-[-10px]">
@@ -100,6 +105,7 @@
                   <img class="transition duration-500 max-h-[40vw]" src="./assets/img/people/fajar-transparent.png" />
                </div>
             </div>
+            <img class="hidden lg:block" src="./assets/img/people/all-member.png" alt="">
          </div>
          <div class="marquee-w pointer-events-none	">
             <div class="marquee font-bebas">
