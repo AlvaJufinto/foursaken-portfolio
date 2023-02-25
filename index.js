@@ -26,7 +26,7 @@ function articleShow() {
 
   moreButton.addEventListener('click', () => {
     articles.forEach((article) => {
-      article.classList.toggle('hidden')
+      article.classList.toggle('article-fade')
     })
 
     if(moreButton.innerText  === "More") {
