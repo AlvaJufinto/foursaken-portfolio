@@ -131,7 +131,7 @@ body {
 }
 
 #content {
-    display: none;
+    /* display: none; */
 }
 
 #preloader.hide {
@@ -156,9 +156,6 @@ body {
     }
   }
 
-.about-us-description {
-    background-image: url("./../assets/img/backgrounds/about-img.png");
-}
 
 .about-zaidan:hover img {
     filter: drop-shadow(0px 0px 10rem #C8B5FD);
