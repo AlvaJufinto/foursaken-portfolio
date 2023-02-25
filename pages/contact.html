@@ -22,14 +22,15 @@
 
 <body>
     <!-- preloader -->
-    <div id="preloader" class="bg-[#5417CE]">
-        <video class="h-[100vh] w-[400vw]" src="./assets/video/forsaken-preload.mp4" autoplay loop muted></video>
+    <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
+        <video class="h-[100vh] w-[400vw]" src="../assets/video/forsaken-preload.mp4" autoplay loop muted></video>
     </div>
     <!-- preloader -->
  
+    <div id="content">
     <div class="bg-[#15013C]">
         <!-- NAVBAR -->
-        <nav class="navbar fixed top-[0] left-[0] w-[100vw] z-[10] h-[70px] flex justify-center items-center font-semibold text-white">
+        <nav class="navbar sticky top-[0] left-[0] w-[100vw] z-[10] h-[70px] flex justify-center items-center font-semibold text-white">
             <ul class="flex w-[1215px] max-w-[1215px] justify-between mx-10 font-sora bg-transparent">
                 <div class="nav-logo flex">
                     <img src="../assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
@@ -45,7 +46,7 @@
                         <a href="./../index.html">Home</a>
                     </li>
                     <li>
-                        <a href="./about.html">About</a>
+                        <a href="./../pages/about.html">About</a>
                     </li>
                     <li class="relative">
                         <a href="">Contact</a>
@@ -123,7 +124,7 @@
                            <span class="transition-all duration-700 ease-in-out group">Contact Us</span>
                            <span
                               class="group-hover absolute transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
-                              <img src="./assets/icons/arrow-button.svg" />
+                              <img src="../assets/icons/arrow-button.svg" />
                            </span>
                         </div>
                      </a>
@@ -145,8 +146,8 @@
                   <div id="pages" class="flex flex-col font-sora justify-between ">
                      <ul class="flex flex-col text-[32px] items-center gap-[16px]">
                         <li><a href="/">Home</a></li>
-                        <li><a href="./pages/about.html">About</a></li>
-                        <li><a href="./pages/contact.html">Contact Us</a></li>
+                        <li><a href="../pages/about.html">About</a></li>
+                        <li><a href="">Contact Us</a></li>
                      </ul>
                   </div>
    
@@ -171,6 +172,7 @@
          </div>
         <!-- END FOOTER -->
 
+    </div>
     </div>
     <script src="./../index.js">
 

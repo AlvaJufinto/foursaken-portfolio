@@ -18,13 +18,14 @@
 </head>
 <body>
    <!-- preloader -->
-   <div id="preloader" class="bg-[#5417CE]">
-      <video class="h-[100vh] w-[400vw]" src="./assets/video/forsaken-preload.mp4" autoplay loop muted></video>
+   <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
+      <video class="h-[100vh] w-[400vw]" src="../assets/video/forsaken-preload.mp4" autoplay loop muted></video>
    </div>
    <!-- preloader -->
    
+   <div id="content">   
    <!-- NAVBAR -->
-   <nav class="navbar fixed top-[0] left-[0] w-[100vw] z-[10] h-[70px] flex justify-center items-center font-semibold text-white">
+   <nav class="navbar sticky top-[0] left-[0] w-[100vw] z-[10] h-[70px] flex justify-center items-center font-semibold text-white">
       <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 font-sora bg-transparent">
          <div class="nav-logo flex">
             <img src="./../assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
@@ -52,7 +53,7 @@
    </nav>
    <!-- END NAVBAR -->
    <!-- HEADER -->
-   <div class="w-[100%] font-sora text-white bg-no-repeat bg-cover h-[100vh] flex flex-col overflow-hidden z-[-2] items-center" style="background-image: url('../assets/img/backgrounds/sija-bg.png');">
+   <div class="w-[100%] font-sora relative bottom-[70px] text-white bg-no-repeat bg-cover h-[100vh] flex flex-col overflow-hidden z-[-2] items-center" style="background-image: url('../assets/img/backgrounds/sija-bg.png');">
       <div class="flex flex-col items-center max-w-[1100px] justify-between mt-[185px] font-sora bg-transparents bg-[#00000]">
          <h1 class="text-[8rem] font-semibold">Discover More</h1>
          <div class="flex gap-[60px] translate-y-[-100px]">
@@ -147,7 +148,7 @@
                      <span class="transition-all duration-700 ease-in-out group">Contact Us</span>
                      <span
                         class="group-hover absolute transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
-                        <img src="./assets/icons/arrow-button.svg" />
+                        <img src="../assets/icons/arrow-button.svg" />
                      </span>
                   </div>
                </a>
@@ -194,6 +195,7 @@
       </div>
    </div>
    <!-- END FOOTER -->
+   </div>
 
    <script src="./../index.js">
          
