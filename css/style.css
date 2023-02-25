@@ -126,10 +126,14 @@ body {
     }
 }
 
-.article.hidden {
+/* .article-fade img, .article-fade div, .article-fade a {
     display: none;
+}  */
+.article-fade {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
 }
-
 #content {
     display: none;
 }
