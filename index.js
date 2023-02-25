@@ -6,7 +6,7 @@ window.onload = function() {
     setTimeout(function() {
         preloader.classList.add("hide");
         content.style.display = "block";
-    }, 0);
+    }, 3000);
     
       // add an event listener for the end of the animation
       preloader.addEventListener("animationend", function() {
@@ -17,7 +17,7 @@ window.onload = function() {
         video.play();
       });
   };
-
+  
 function articleShow() {
   const articles = document.querySelectorAll('.article');
   const moreButton = document.querySelector('.article-button');

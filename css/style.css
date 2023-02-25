@@ -12,10 +12,6 @@ body {
     box-sizing: border-box;
 }
 
-#content {
-    display: none;
-}
-
 .navbar {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(30px);
@@ -134,9 +130,31 @@ body {
     display: none;
 }
 
-#preloader.fade {
+#content {
     display: none;
 }
+
+#preloader.hide {
+    animation: slide-up 1s ease-out forwards, mask-fade 1s ease-in-out 0.5s forwards;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @keyframes mask-fade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 .about-us-description {
     background-image: url("./../assets/img/backgrounds/about-img.png");
