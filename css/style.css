@@ -135,7 +135,7 @@ body {
     position: absolute;
 }
 #content {
-    display: none;
+    /* display: none; */
 }
 
 #preloader.hide {
