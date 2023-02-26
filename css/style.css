@@ -42,7 +42,7 @@ body {
 }
 .marquee span{
     display: inline-block;
-    color: white;
+    color: yellow;
     white-space: nowrap;
     font-size: 10rem;
     animation: marquee 40s linear infinite;
@@ -133,11 +133,11 @@ body {
 }  */
 .article-fade {
     opacity: 0;
-    visibility: hidden;
+    display: none;
     position: absolute;
 }
 #content {
-    /* display: none; */
+    display: none;
 }
 
 #preloader.hide {

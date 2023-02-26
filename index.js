@@ -8,7 +8,7 @@ function preloaderShow() {
     setTimeout(function() {
         preloader.classList.add("hide");
         content.style.display = "block";
-    }, 0);
+    }, 3000);
     
       // add an event listener for the end of the animation
       preloader.addEventListener("animationend", function() {
