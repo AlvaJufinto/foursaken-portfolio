@@ -8,7 +8,7 @@ function preloaderShow() {
     setTimeout(function() {
         preloader.classList.add("hide");
         content.style.display = "block";
-    }, 3000);
+    }, 2900);
     
       // add an event listener for the end of the animation
       preloader.addEventListener("animationend", function() {
@@ -27,8 +27,6 @@ function showMobileNavbar() {
   const mobileNavbar = document.querySelector('.navbar-mobile');
   const mobileNavbarClose = document.querySelector('.navbar-mobile-close');
 
-  console.log(mobileNavBurger);
-
   mobileNavBurger.addEventListener('click', () => {
     mobileNavbar.classList.add('translate-x-[0]')
   })
@@ -43,10 +41,8 @@ function toggleBlur() {
   const jumbotron = document.querySelector('.jumbotron');
   const navbar = document.querySelector('.navbar');
 
-  let jumbotronHeight = jumbotron.offsetHeight ? jumbotron.offsetHeight : 100;
+  let jumbotronHeight = jumbotron.offsetHeight | 100;
 
-  console.log(jumbotronHeight);
-  
   if(jumbotron) {
     window.addEventListener('scroll', () => {
       if(window.pageYOffset >= jumbotronHeight - 100 ) {
@@ -71,8 +67,6 @@ toggleBlur();
 function articleShow() {
   const articles = document.querySelectorAll('.article');
   const moreButton = document.querySelector('.article-button');
-
-  console.log(articles);
 
   moreButton.addEventListener('click', () => {
     articles.forEach((article) => {
