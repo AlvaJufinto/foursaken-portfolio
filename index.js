@@ -49,13 +49,21 @@ function toggleBlur() {
   const jumbotron = document.querySelector('.jumbotron');
   const navbar = document.querySelector('.navbar');
 
-  let jumbotronHeight = jumbotron.offsetHeight;
+  let jumbotronHeight = jumbotron.offsetHeight ? jumbotron.offsetHeight : 100;
 
   console.log(jumbotronHeight);
   
+  if(jumbotron) {
+    window.addEventListener('scroll', () => {
+      if(window.pageYOffset >= jumbotronHeight - 100 ) {
+        navbar.classList.add('scrolled')
+      } else {
+        navbar.classList.remove('scrolled')
+      }
+    })
+  }
   window.addEventListener('scroll', () => {
-    // console.log(window.pageYOffset );
-    if(window.pageYOffset >= jumbotronHeight - 100) {
+    if(window.pageYOffset >= 100 ) {
       navbar.classList.add('scrolled')
     } else {
       navbar.classList.remove('scrolled')
@@ -64,3 +72,19 @@ function toggleBlur() {
 
 }
 toggleBlur();
+
+function showMobileNavbar() {
+  const mobileNavBurger = document.querySelector('.navbar-burger');
+  const mobileNavbar = document.querySelector('.navbar-mobile');
+  const mobileNavbarClose = document.querySelector('.navbar-mobile-close');
+
+  mobileNavBurger.addEventListener('click', () => {
+    mobileNavbar.classList.add('translate-x-[0]')
+  })
+
+  mobileNavbarClose.addEventListener('click', () => {
+    mobileNavbar.classList.remove('translate-x-[0]')
+  })
+}
+
+showMobileNavbar();

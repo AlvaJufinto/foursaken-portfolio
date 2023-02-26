@@ -12,17 +12,16 @@
    
    <script src="https://cdn.tailwindcss.com"></script>
    <script src="./tailwind.config.js"></script>
-
    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
    <!-- preloader -->
-   <!-- <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
+   <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
       <video class="h-[100vh] w-[400vw]" src="./assets/video/forsaken-preload.mp4" autoplay loop muted></video>
-   </div> -->
+   </div>
    <!-- preloader -->
    
-   <div id="content\">
+   <div id="content">
       <!-- NAVBAR -->
       <nav class="navbar transition-all duration-[500ms] sticky top-[0] left-[0] w-[100vw] z-[1] h-[70px] flex justify-center items-center font-semibold text-white">
          <ul class="flex w-[1215px] justify-between px-5 font-sora bg-transparent">
@@ -47,13 +46,52 @@
                   <a href="./pages/contact.html">Contact</a>
                </li>
             </div>
-            <div class="hidden md:flex flex-col gap-[5px] rounded-[50%] items-center justify-center h-[35px] w-[35px] bg-[#9747FF]">
+            <div class="navbar-burger hidden md:flex flex-col gap-[5px] rounded-[50%] items-center justify-center h-[35px] w-[35px] bg-[#9747FF]">
                <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
                <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
                <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
             </div>
          </ul>
       </nav>
+      <div class="navbar-mobile fixed top-[0] left-[0] translate-x-[100%] h-[100vh] w-[100vw] hidden transition-all duration-[500ms] z-[10] font-sora text-white bg-[#3D0AA3] p-[30px] hidden md:flex flex-col justify-between">
+         <div class="flex justify-end">
+            <img class="navbar-mobile-close h-[35px] w-[35px]" src="./assets/icons/close-icon.svg" />
+         </div>
+         <div class="flex flex-col gap-[50px]">
+            <a class="flex gap-[10px] items-center" href="./index.html">
+               <div class="h-[10px] w-[10px] bg-[#FFFFFF] rounded-[50%]"></div>
+               <p class="text-[2rem]">Home</p>
+            </a>
+            <a class="flex gap-[10px] items-center" href="./pages/about.html">
+               <div class="h-[10px] w-[10px] bg-[#FFFFFF] rounded-[50%] opacity-0"></div>
+               <p class="text-[2rem]">About Us</p>
+            </a>
+            <a class="flex gap-[10px] items-center" href="./pages/contact.html">
+               <div class="h-[10px] w-[10px] bg-[#FFFFFF] rounded-[50%] opacity-0"></div>
+               <p class="text-[2rem]">Contact</p>
+            </a>
+         </div>
+         <div class="flex flex-col gap-[30px]">
+            <div class="nav-logo flex items-center">
+               <img src="./assets/icons/arrow-navbar.svg" class="w-[12px] h-[12px]" />
+               <div>
+                  <a href="/">
+                     <h1 class="ml-2 text-[1rem]">Foursaken</h1>
+                  </a>
+               </div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+               <button
+                  class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  contact@foursaken.com
+               </button>
+               <button
+                  class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  +62 896 0194 3530
+               </button>
+            </div>
+         </div>
+      </div>
       <!-- END NAVBAR -->
 
       <!-- JUMBOTRON -->
@@ -360,8 +398,7 @@
       </div>
       <!-- END FOOTER -->
    </div>
-   <script src="./index.js">
-      
-    </script>
+   <script src="./index.js"></script>
+
 </body>
 </html>
