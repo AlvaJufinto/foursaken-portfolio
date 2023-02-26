@@ -12,7 +12,7 @@ body {
     box-sizing: border-box;
 }
 
-.navbar {
+.scrolled {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(30px);
 }

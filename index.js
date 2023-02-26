@@ -1,4 +1,6 @@
-window.onload = function() {
+function preloaderShow() {
+
+  window.addEventListener('load', function() {
     const preloader = document.getElementById("preloader");
     const content = document.getElementById("content");
     const video = preloader.querySelector("video");
@@ -16,7 +18,10 @@ window.onload = function() {
         // start the video playback
         video.play();
       });
-  };
+  })
+}
+preloaderShow();
+
   
 function articleShow() {
   const articles = document.querySelectorAll('.article');
@@ -38,5 +43,24 @@ function articleShow() {
 
 
 }
-
 articleShow()
+
+function toggleBlur() {
+  const jumbotron = document.querySelector('.jumbotron');
+  const navbar = document.querySelector('.navbar');
+
+  let jumbotronHeight = jumbotron.offsetHeight;
+
+  console.log(jumbotronHeight);
+  
+  window.addEventListener('scroll', () => {
+    // console.log(window.pageYOffset );
+    if(window.pageYOffset >= jumbotronHeight - 100) {
+      navbar.classList.add('scrolled')
+    } else {
+      navbar.classList.remove('scrolled')
+    }
+  })
+
+}
+toggleBlur();
