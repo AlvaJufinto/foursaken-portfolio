@@ -22,28 +22,22 @@ function preloaderShow() {
 }
 preloaderShow();
 
-  
-function articleShow() {
-  const articles = document.querySelectorAll('.article');
-  const moreButton = document.querySelector('.article-button');
+function showMobileNavbar() {
+  const mobileNavBurger = document.querySelector('.navbar-burger');
+  const mobileNavbar = document.querySelector('.navbar-mobile');
+  const mobileNavbarClose = document.querySelector('.navbar-mobile-close');
 
-  console.log(articles);
+  console.log(mobileNavBurger);
 
-  moreButton.addEventListener('click', () => {
-    articles.forEach((article) => {
-      article.classList.toggle('article-fade')
-    })
-
-    if(moreButton.innerText  === "More") {
-      moreButton.innerText  = "Less"
-    } else {
-      moreButton.innerText  = "More"
-    }
+  mobileNavBurger.addEventListener('click', () => {
+    mobileNavbar.classList.add('translate-x-[0]')
   })
 
-
+  mobileNavbarClose.addEventListener('click', () => {
+    mobileNavbar.classList.remove('translate-x-[0]')
+  })
 }
-articleShow()
+showMobileNavbar();  
 
 function toggleBlur() {
   const jumbotron = document.querySelector('.jumbotron');
@@ -73,18 +67,29 @@ function toggleBlur() {
 }
 toggleBlur();
 
-function showMobileNavbar() {
-  const mobileNavBurger = document.querySelector('.navbar-burger');
-  const mobileNavbar = document.querySelector('.navbar-mobile');
-  const mobileNavbarClose = document.querySelector('.navbar-mobile-close');
 
-  mobileNavBurger.addEventListener('click', () => {
-    mobileNavbar.classList.add('translate-x-[0]')
+function articleShow() {
+  const articles = document.querySelectorAll('.article');
+  const moreButton = document.querySelector('.article-button');
+
+  console.log(articles);
+
+  moreButton.addEventListener('click', () => {
+    articles.forEach((article) => {
+      article.classList.toggle('article-fade')
+    })
+
+    if(moreButton.innerText  === "More") {
+      moreButton.innerText  = "Less"
+    } else {
+      moreButton.innerText  = "More"
+    }
   })
 
-  mobileNavbarClose.addEventListener('click', () => {
-    mobileNavbar.classList.remove('translate-x-[0]')
-  })
+
 }
+articleShow()
 
-showMobileNavbar();
+
+
+

@@ -21,12 +21,12 @@
 
 <body>
     <!-- preloader -->
-    <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
+    <!-- <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
         <video class="h-[100vh] w-[400vw]" src="../assets/video/forsaken-preload.mp4" autoplay loop muted></video>
-    </div>
+    </div> -->
     <!-- preloader -->
  
-    <div id="content">
+    <div id="content/" class="max-w-[100vw] overflow-hidden">
         <div class="">
         <!-- NAVBAR -->
         <nav class="navbar scrolled transition-all duration-[500ms] sticky top-[0] left-[0] w-[100vw] z-[1] h-[70px] flex justify-center items-center font-semibold text-white">
@@ -59,9 +59,9 @@
             </div>
             </ul>
         </nav>
-        <div  class="navbar-mobile fixed top-[0] left-[0] translate-x-[100%] h-[100vh] w-[100vw] hidden transition-all duration-[500ms] z-[10] font-sora text-white bg-[#3D0AA3] p-[30px] hidden md:flex flex-col justify-between">
+        <div class="navbar-mobile fixed top-[0] left-[0] translate-x-[100%] h-[100vh] w-[100vw] hidden transition-all duration-[500ms] z-[10] font-sora text-white bg-[#3D0AA3] p-[30px] hidden md:flex flex-col justify-between">
             <div class="flex justify-end">
-            <img class="navbar-mobile-close h-[35px] w-[35px]" src="./assets/icons/close-icon.svg" />
+                <img class="navbar-mobile-close h-[35px] w-[35px]" src="./../assets/icons/close-icon.svg" />
             </div>
             <div class="flex flex-col gap-[50px]">
             <a class="flex gap-[10px] items-center" href="./../index.html">
@@ -79,9 +79,9 @@
             </div>
             <div class="flex flex-col gap-[30px]">
             <div class="nav-logo flex items-center">
-                <img src="./assets/icons/arrow-navbar.svg" class="w-[12px] h-[12px]" />
+                <img src="./../assets/icons/arrow-navbar.svg" class="w-[12px] h-[12px]" />
                 <div>
-                    <a href="/">
+                    <a href="./../index.html">
                         <h1 class="ml-2 text-[1rem]">Foursaken</h1>
                     </a>
                 </div>
@@ -100,25 +100,25 @@
         </div>
         <!-- END NAVBAR -->
 
-        <div class="py-[170px] mt-[-70px] flex justify-center bg-[#15013C]">
+        <div class="py-[170px] font-sora mt-[-70px] flex justify-center bg-[#15013C]">
             <div class="flex flex-col justify-center items-center min-w-[845px]">
                 <div class="flex gap-[30px] flex-end">
-                    <img class="w-[120px]" src="./../assets/img/people/zaidan-profile.png" alt="">
-                    <img class="w-[120px]" src="./../assets/img/people/alva-profile.png" alt="">
-                    <h1 class="text-[6rem] text-white font-sora font-semibold">Let’s Work</h1>
+                    <img class="w-[120px] lg:w-[40px]" src="./../assets/img/people/zaidan-profile.png" alt="">
+                    <img class="w-[120px] lg:w-[40px]" src="./../assets/img/people/alva-profile.png" alt="">
+                    <h1 class="text-[6rem] lg:text-[2rem] text-white font-sora font-semibold">Let’s Work</h1>
                 </div>
                 <div class="flex flex-end gap-[30px]">
-                    <h1 class="text-[6rem] text-white font-sora font-semibold">Together!</h1>
-                    <img class="w-[120px]" src="./../assets/img/people/syafiq-profile.png" alt="">
-                    <img class="w-[120px]" src="./../assets/img/people/fajar-profile.png" alt="">
+                    <h1 class="text-[6rem] lg:text-[2rem] text-white font-sora font-semibold">Together!</h1>
+                    <img class="w-[120px] lg:w-[40px]" src="./../assets/img/people/syafiq-profile.png" alt="">
+                    <img class="w-[120px] lg:w-[40px]" src="./../assets/img/people/fajar-profile.png" alt="">
                 </div>
-                <div class="mt-[40px] flex gap-[40px]">
+                <div class="mt-[40px] flex gap-[40px] lg:flex-col">
                     <button
-                        class="rounded-[50px] px-[50px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                        class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
                         contact@foursaken.com
                     </button>
                     <button
-                        class="rounded-[50px] px-[50px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                        class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
                         +62 896 0194 3530
                     </button>
                 </div>
@@ -126,64 +126,58 @@
         </div>
             
         <div class="flex justify-center text-[#FFFFFF] font-sora bg-[#15013C]">
-            <div class="flex gap-[30px] w-[1215px] px-10 min-h-[515px]">
-                <div class="flex flex-col gap-[30px]">
-                    <div class="flex gap-[30px] h-[175px]">
-                        <div class="flex flex-col gap-[18px] w-[420px] border-[1px] rounded-[20px] p-[30px]">
-                            <p class="text-[1.5rem]">What’s Your Name?</p>
+            <div class="flex gap-[30px] w-[1215px] max-w-[100%] px-10 min-h-[515px] lg:flex-col lg:justify-between">
+                <div class="flex flex-col gap-[30px] lg:justify-between lg:gap-[220px]">
+                    <div class="flex gap-[30px] h-[175px] lg:flex-col">
+                        <div class="flex flex-col gap-[18px] w-[420px] lg:w-[100%] border-[1px] rounded-[20px] p-[30px]">
+                            <p class="text-[1.5rem] text-[1rem]">What’s Your Name?</p>
                                 <textarea class="flex-1 bg-transparent outline-none resize-none" type="text" placeholder="Ex. Zaidan Adli Anandra"></textarea>
                         </div>
-                        <div class="flex flex-col gap-[18px] w-[420px] border-[1px] rounded-[20px] p-[30px]">
-                            <p class="text-[1.5rem]">What’s Your Email?</p>
+                        <div class="flex flex-col gap-[18px] w-[420px] lg:w-[100%] border-[1px] rounded-[20px] p-[30px]">
+                            <p class="text-[1.5rem] text-[1rem]">What’s Your Email?</p>
                             <textarea class="flex-1 bg-transparent outline-none resize-none" type="text" placeholder="Ex. zaidan@gmail.com"></textarea>
                         </div>
                     </div>  
                     <div class="flex flex-col gap-[18px] h-[300px] border-[1px] rounded-[20px] p-[30px]">
-                        <p class="text-[1.5rem]">Message</p>
+                        <p class="text-[1.5rem] text-[1rem]">Message</p>
                         <textarea class="flex-1 bg-transparent outline-none resize-none" placeholder="Hello, Foursaken team. I want to make my digital dream comes true...."></textarea>
                     </div>
                 </div>
-                <button class="bg-[#6D3AF8] w-[270px] rounded-[20px] text-[1.5rem] font-bold">Send</button>
+                <button class="bg-[#6D3AF8] w-[270px] lg:w-[100%] lg:min-h-[100px] rounded-[20px] text-[1.5rem] font-bold">Send</button>
             </div>
-        <div>
-
         </div>
-    </div>
                 
-            <!-- FOOTER -->
-            <div id="footer" class="bg-[#15013C] font-sora text-white">
-                <div class="mx-auto max-w-[1215px] flex flex-col items-center px-[77px] pt-[162px]">
-                <div class="flex flex-col justify-center align-center items-center py-[77px] gap-[150px]">
-    
-                    <div id="pages" class="flex flex-col font-sora justify-between ">
-                        <ul class="flex flex-col text-[32px] items-center gap-[16px]">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="../pages/about.html">About</a></li>
-                            <li><a href="">Contact Us</a></li>
-                        </ul>
-                    </div>
-    
-                    <div id="alamat" class="flex flex-col align-center items-center justify-center gap-[32px] w-fit">
-                        <h1 class="text-[36px] font-sora font-semibold ">Socialize With Social</h1>
-                        <div class="flex flex-row justify-between align-center gap-[78px]">
-                            <a href=""><img src="./../assets/icons/linkdln.svg" alt=""></a>
-                            <a href=""><img src="./../assets/icons/instagram.svg" alt=""></a>
-                            <a href=""><img src="./../assets/icons/email.svg" alt=""></a>
-                            <a href=""><img src="./../assets/icons/youtube.svg" alt=""></a>
-                        </div>   
-                    </div>
-    
-                    <div class="flex flex-col items-center justify-center gap-[32px] font-inter ">
-                        <p class="text-[24px] font-light">© 2023 Foursaken. All rights reserved.</p>
-                        <p class="font-semibold text-[24px]">Made with 💜 by Team</p>
-                    </div>
-    
+        <!-- FOOTER -->
+        <div id="footer" class="bg-[#15013C] font-sora text-white flex justify-center items-center flex-col max-w-[100%] px-[20px]">
+            <div class="w-[1215px] max-w-[100%] flex flex-col items-center pt-[162px]">
+            <div class="flex flex-col justify-center align-center items-center py-[77px] gap-[150px]">
+                <div id="pages" class="flex flex-col font-sora justify-between items-center">
+                    <ul class="flex flex-col text-[32px] items-center gap-[16px]">
+                        <li><a href="./../index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./pages/contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
-    
+
+                <div id="alamat" class="flex flex-col align-center items-center justify-center gap-[32px] w-fit">
+                    <h1 class="text-[36px] font-sora font-semibold text-center">Join our vibrant community</h1>
+                    <div class="flex flex-row justify-between align-center gap-[78px]">
+                        <a href=""><img src="./../assets/icons/linkdln.svg" alt=""></a>
+                        <a href=""><img src="./../assets/icons/instagram.svg" alt=""></a>
+                        <a href=""><img src="./../assets/icons/email.svg" alt=""></a>
+                        <a href=""><img src="./../assets/icons/youtube.svg" alt=""></a>
+                    </div>   
+                </div>
+
+                <div class="flex flex-col items-center justify-center gap-[32px] font-inter">
+                    <p class="text-[24px] font-light text-center">© 2023 Foursaken. All rights reserved.</p>
+                    <p class="font-semibold text-[24px] text-center">Made with 💜 by Team</p>
                 </div>
             </div>
-            <!-- END FOOTER -->
 
+            </div>
+        </div>
+        <!-- END FOOTER -->
         </div>
     </div>
     <script src="./../index.js"></script>
