@@ -25,7 +25,7 @@
    <div id="content/">
       <!-- NAVBAR -->
       <nav class="navbar transition-all duration-[500ms] sticky top-[0] left-[0] w-[100vw] z-[1] h-[70px] flex justify-center items-center font-semibold text-white">
-         <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 font-sora bg-transparent">
+         <ul class="flex w-[1215px] justify-between px-5 font-sora bg-transparent">
             <div class="nav-logo flex">
                <img src="./assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
                <li>
@@ -58,7 +58,7 @@
 
       <!-- JUMBOTRON -->
       <div class="bg-transparent relative bottom-[70px]">
-         <div class="bg-fixed jumbotron bg-center bg-cover bg-no-repeat h-[100vh] flex flex-col overflow-hidden z-[-2] items-center justify-end gap-[100px]">
+         <div class="bg-fixed jumbotron bg-center bg-cover bg-no-repeat h-[100vh] flex flex-col overflow-hidden items-center justify-end gap-[100px]">
             <h1 class="absolute top-[0%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
                <img src="./assets/icons/arrow-forward.svg" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " />
             </h1>
@@ -97,7 +97,7 @@
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
                    translate-x-[-10px]">
                   <div class="card left transition duration-[800ms]
-                           opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
+                           opacity-0 z-[10] absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
                      <p class="font-semibold">Hi👋, My name is Fajar</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">Back-End Developer</span></p>
                   </div>
@@ -116,7 +116,7 @@
       <!-- END JUMBOTRON -->
 
       <!-- GREETINGS -->
-      <div class="flex flex-row container font-sora mx-auto max-w-[1215px] justify-evenly mt-[5rem] mb-[10rem] md:mx-[2rem] md:max-w-fit md:flex-col md:gap-[20px] md:mt-[72px] md:mb-[72px]">
+      <div class="flex flex-row container font-sora px-5 w-[1215px] max-w-[100%] justify-evenly mt-[5rem] mb-[10rem] md:mx-[2rem] md:max-w-fit sm:flex-col md:gap-[20px] md:mt-[72px] md:mb-[72px]">
          <h1 class="max-w-[45rem] text-[36px] text-start font-medium md:text-[20px] md:max-w-[20rem]">
             Our vision is to <span
                class="underline text-[#15013C]">Build. Develop. Grow.</span> Bringing your digital dreams to reality with professionalism.</h1>
@@ -177,7 +177,7 @@
       
       <!-- OUR PROJECT -->
       <div class="min-h-[200px] bg-[#15013C] py-[75px]">
-         <div class="mx-auto max-w-[1215px] flex flex-col items-center">
+         <div class="w-[1215px] max-w-[100%] px-5 flex flex-col items-center">
             <div class="flex justify-center gap-[10px] items-center ">
                <img src="./assets/icons/arrow-project.svg" alt="" class="md:w-[25px] md:h-[25px]" />
                <h3 class="font-sora text-[#FFFFFF] text-[3rem] md:text-[24px]">Our Best Project</h3>
@@ -185,26 +185,26 @@
             <div class="py-[115px] flex flex-col gap-[115px] md:w-[100vw] md:gap-[80px]">
                <div class="flex gap-[100px] items-center lg:gap-[20px] lg:flex-col">
                   <img class="min-w-[545px] h-[300px] object-cover object-top md:min-w-[253px] md:h-[139px]" src="./assets/img/projects/labra-img.png" />
-                  <div class="lg:items-start lg:flex lg:flex-col md:w-[253px]">
-                     <p class="font-sora text-white font-semibold text-[2rem] md:text-[20px] ">Labra V.22</p>
-                     <p class="font-sora text-white font-light text-[1.5rem] md:text-[14px]">
+                  <div class="md:flex md:flex-col md:w-[253px]">
+                     <p class="font-sora text-white font-semibold text-[2rem] md:text-[20px] lg:text-center">Labra V.22</p>
+                     <p class="font-sora text-white font-light text-[1.5rem] md:text-[14px] lg:text-center">
                         Labra is a radio IP product developed by an Indonesian company. We were responsible for designing and building the landing page.
                      </p>
                   </div>
                </div>
                <div class=" flex flex-row-reverse gap-[100px] items-center lg:gap-[20px] lg:flex-col">
                   <img class="min-w-[545px] h-[300px] object-cover object-top md:min-w-[253px] md:h-[139px]"  src="./assets/img/projects/ardtech-img.png" />
-                  <div class="lg:items-start lg:flex lg:flex-col md:w-[253px]">
-                     <p class="font-sora text-white text-right font-semibold text-[2rem] md:text-[20px]">ARD Tech</p>
-                     <p class="font-sora text-white text-right font-light text-[1.5rem] md:text-start md:text-[14px]">ARD Tech, a dynamic IoT company based in Indonesia, has entrusted us with the task of designing and developing their
+                  <div class="md:flex lg:flex-col md:w-[253px]">
+                     <p class="font-sora text-white text-right font-semibold text-[2rem] md:text-[20px] lg:text-center">ARD Tech</p>
+                     <p class="font-sora text-white text-right font-light text-[1.5rem] md:text-start md:text-[14px] lg:text-center">ARD Tech, a dynamic IoT company based in Indonesia, has entrusted us with the task of designing and developing their
                      impactful landing page and seamless e-commerce platform.</p>
                   </div>
                </div>
                <div class="flex gap-[100px] items-center lg:gap-[20px] lg:flex-col">
                   <img class="min-w-[545px] h-[300px] object-cover object-top md:min-w-[253px] md:h-[139px]" src="./assets/img/projects/ingfokan-pkl-img.png" />
-                  <div class="lg:items-start lg:flex lg:flex-col md:w-[253px] md:text-[20px]">
-                     <p class="font-sora text-white font-semibold text-[2rem]">IngfokanPKL</p>
-                     <p class="font-sora text-white font-light text-[1.5rem] md:text-[14px]">
+                  <div class="md:flex lg:flex-col md:w-[253px] md:text-[20px]">
+                     <p class="font-sora text-white font-semibold text-[2rem] lg:text-center">IngfokanPKL</p>
+                     <p class="font-sora text-white font-light text-[1.5rem] md:text-[14px] lg:text-center">
                            IngfokanPKL is an online platform specifically designed to help individuals search and find relevant information on internships. The website was developed in response to a request from SMKN 26 Jakarta, our school.
                      </p>
                   </div>
@@ -219,8 +219,8 @@
       <!-- END OUR PROJECT -->
 
       <!-- ARTICLE -->
-      <div class="bg-[#FFFFFF] py-[5rem] font-sora">
-         <div class="mx-auto max-w-[1215px] flex flex-col items-center md:max-w-[360px]">
+      <div class="bg-[#FFFFFF] py-[5rem] font-sora flex justify-center">
+         <div class="w-[1215px] max-w-[100%] flex flex-col items-center md:max-w-[360px]">
             <h1 class="flex flex-row font-bold text-[3rem] mb-[4.9rem] mt-[5rem] gap-[20px] md:text-[24px]">Our Article & Resources <img src="assets/icons/arrow-article.svg" class="md:w-[25px] md:h-[25px] md:relative md:top-[2.5px]"></h1>
             <div class="flex flex-wrap justify-center md:gap-[50px]">
                
@@ -237,9 +237,9 @@
                      </div>
                      <p class="md:ml-[57px]">10 days ago</p>
                   </div>
-                  <a href="https://medium.com/@fajarmulyos/iterasi-array-pada-pemrograman-ruby-menggunakan-select-reject-dan-delete-30c4d5e99c8c" target="_blank">
+                  <a class="justify-self-end md:w-[100%]" href="https://medium.com/@fajarmulyos/iterasi-array-pada-pemrograman-ruby-menggunakan-select-reject-dan-delete-30c4d5e99c8c" target="_blank">
                      <button 
-                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[85vw]">
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
                         Read More
                      </button>
                   </a>
@@ -259,9 +259,9 @@
                      </div>
                      <p class="md:ml-[55px]">2 days ago</p>
                   </div>
-                  <a class="justify-self-end bg-[#00000]" href="https://medium.com/@zaidanadli83/be-a-leader-not-a-boss-f3e62bad7698" target="_blank">
+                  <a class="justify-self-end md:w-[100%] bg-[#00000]" href="https://medium.com/@zaidanadli83/be-a-leader-not-a-boss-f3e62bad7698" target="_blank">
                      <button 
-                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[85vw]">
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
                         Read More
                      </button>
                   </a>
@@ -280,9 +280,9 @@
                      </div>
                      <p class="md:ml-[55px]">2 days ago</p>
                   </div>
-                  <a class="justify-self-end bg-[#00000]" href="https://medium.com/@Foursaken/my-top-3-favorites-figma-plugin-107c4fbef423" target="_blank">
+                  <a class="justify-self-end md:w-[100%]"  href="https://medium.com/@Foursaken/my-top-3-favorites-figma-plugin-107c4fbef423" target="_blank">
                      <button 
-                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[85vw]">
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
                         Read More
                      </button>
                   </a>
@@ -300,7 +300,7 @@
       <!-- END ARTICLE -->
 
       <!-- FOOTER -->
-      <div id="footer" class="bg-[#15013C] font-sora text-white">
+      <!-- <div id="footer" class="bg-[#15013C] font-sora text-white">
          <div class="mx-auto max-w-[1215px] flex flex-col items-center px-[77px] pt-[162px]">
 
             <div class="flex flex-col">
@@ -360,7 +360,7 @@
             </div>
 
          </div>
-      </div>
+      </div> -->
       <!-- END FOOTER -->
    </div>
    <script src="./index.js">
