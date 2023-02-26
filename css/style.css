@@ -42,7 +42,7 @@ body {
 }
 .marquee span{
     display: inline-block;
-    color: yellow;
+    color: white;
     white-space: nowrap;
     font-size: 10rem;
     animation: marquee 40s linear infinite;
