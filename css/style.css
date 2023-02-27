@@ -14,13 +14,14 @@ html {
     box-sizing: border-box;
 }
 
-.navbar {
+.scrolled {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(30px);
 }
 
 .jumbotron {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("./../assets/img/backgrounds/liquid-bg.png");
+    background-size: 100%;
+    background-image: url("./../assets/img/backgrounds/jumbotron-bg.png");
 }
 
 .marquee-w {
@@ -74,7 +75,9 @@ html {
 .font-bebas {
     font-family: 'Bebas Neue', cursive;
 }
-
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
 .header-img:hover .card {
     opacity: 1;
     display: block;
@@ -126,3 +129,57 @@ html {
     }
 }
 
+/* .article-fade img, .article-fade div, .article-fade a {
+    display: none;
+}  */
+.article-fade {
+    opacity: 0;
+    display: none;
+    position: fixed;
+}
+#content {
+    display: none;
+}
+
+#preloader.hide {
+    animation: slide-up 1s ease-out forwards, mask-fade 1s ease-in-out 0.3s forwards;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @keyframes mask-fade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.about-us-description {
+    background-image: url("./../assets/img/backgrounds/about-img.png");
+}
+
+
+.about-zaidan:hover img {
+    filter: drop-shadow(0px 0px 10rem #C8B5FD);
+}
+
+.about-alva:hover img {
+    filter: drop-shadow(0px 0px 10rem #6EE7B7);
+}
+
+.about-syafiq:hover img {
+    filter: drop-shadow(0px 0px 10rem #F9A8D4);
+}
+
+.about-fajar:hover img {
+    filter: drop-shadow(0px 0px 10rem #FCD34D);
+}

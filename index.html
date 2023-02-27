@@ -8,19 +8,23 @@
    
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora&family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
    
-   <!-- <script src="./libs/tailwind.js"></script> -->
    <script src="https://cdn.tailwindcss.com"></script>
-   <!-- <link rel="stylesheet" href="./css/output.css"> -->
-
+   <script src="./tailwind.config.js"></script>
    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+   <!-- preloader -->
+   <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
+      <video class="h-[100vh] w-[400vw]" src="./assets/video/forsaken-preload.mp4" autoplay loop muted></video>
+   </div>
+   <!-- preloader -->
+   
    <div id="content">
       <!-- NAVBAR -->
-      <nav class="navbar fixed top-[0] left-[0] w-[100vw] z-[10] flex justify-center font-semibold text-white mb-[-3rem]">
-         <ul class="flex w-[1215px] max-w-[1215px] justify-between ml-10 mr-10 py-[20px] font-sora bg-transparent">
+      <nav class="navbar transition-all duration-[500ms] sticky top-[0] left-[0] w-[100vw] z-[1] h-[70px] flex justify-center items-center font-semibold text-white">
+         <ul class="flex w-[1215px] justify-between px-5 font-sora bg-transparent">
             <div class="nav-logo flex">
                <img src="./assets/icons/arrow-navbar.svg" class="max-w-[22px] max-h-[20px] relative top-[7.79px] " />
                <li>
@@ -30,10 +34,10 @@
                </li>
             </div>
       
-            <div class="flex justify-end space-x-10 text-[16px] mt-2">
+            <div class="flex justify-end space-x-10 text-[16px] mt-2 md:hidden">
                <li class="relative">
                   <a href="/">Home</a>
-                  <div class="absolute top-[30px] left-[40%] h-[10px] w-[10px] rounded-[50%] bg-[#FFFFFF]"></div>
+                  <div class="absolute z-[-1] top-[30px] left-[40%] h-[10px] w-[10px] rounded-[50%] bg-[#FFFFFF]"></div>
                </li>
                <li>
                   <a href="/pages/about.html">About</a>
@@ -42,23 +46,66 @@
                   <a href="./pages/contact.html">Contact</a>
                </li>
             </div>
-      
+            <div class="navbar-burger cursor-pointer hidden md:flex flex-col gap-[5px] rounded-[50%] items-center justify-center h-[35px] w-[35px] bg-[#9747FF]">
+               <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
+               <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
+               <div class="bg-[#FFFFFF] h-[1px] w-[50%]"></div>
+            </div>
          </ul>
       </nav>
+      <div class="navbar-mobile fixed top-[0] left-[0] translate-x-[100%] h-[100vh] w-[100vw] hidden transition-all duration-[500ms] z-[10] font-sora text-white bg-[#3D0AA3] p-[30px] hidden md:flex flex-col justify-between">
+         <div class="flex justify-end">
+            <img class="navbar-mobile-close h-[35px] w-[35px]" src="./assets/icons/close-icon.svg" />
+         </div>
+         <div class="flex flex-col gap-[50px]">
+            <a class="flex gap-[10px] items-center" href="./index.html">
+               <div class="h-[10px] w-[10px] bg-[#FFFFFF] rounded-[50%]"></div>
+               <p class="text-[2rem]">Home</p>
+            </a>
+            <a class="flex gap-[10px] items-center" href="./pages/about.html">
+               <div class="h-[10px] w-[10px] bg-[#FFFFFF] rounded-[50%] opacity-0"></div>
+               <p class="text-[2rem]">About Us</p>
+            </a>
+            <a class="flex gap-[10px] items-center" href="./pages/contact.html">
+               <div class="h-[10px] w-[10px] bg-[#FFFFFF] rounded-[50%] opacity-0"></div>
+               <p class="text-[2rem]">Contact</p>
+            </a>
+         </div>
+         <div class="flex flex-col gap-[30px]">
+            <div class="nav-logo flex items-center">
+               <img src="./assets/icons/arrow-navbar.svg" class="w-[12px] h-[12px]" />
+               <div>
+                  <a href="/">
+                     <h1 class="ml-2 text-[1rem]">Foursaken</h1>
+                  </a>
+               </div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+               <button
+                  class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  contact@foursaken.com
+               </button>
+               <button
+                  class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  +62 896 0194 3530
+               </button>
+            </div>
+         </div>
+      </div>
       <!-- END NAVBAR -->
 
       <!-- JUMBOTRON -->
-      <div class="bg-transparent w-[100%]">
-         <div class="bg-fixed jumbotron bg-no-repeat bg-center bg-cover h-[100vh] flex flex-col overflow-hidden bg-[#C8B5FD] z-[-2] items-center justify-end gap-[100px]">
-            <h1 class="absolute top-[10%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
-               <img src="./assets/icons/arrow-forward.svg" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " /></h1>
+      <div class="bg-transparent relative bottom-[70px]">
+         <div class="bg-fixed jumbotron bg-center bg-cover bg-no-repeat h-[100vh] flex flex-col overflow-hidden items-center justify-end gap-[100px]">
+            <h1 class="absolute top-[0%] font-sora font-[500] text-[26px] text-white mt-[8rem] flex">Creative Code House 
+               <img src="./assets/icons/arrow-forward.svg" class="w-[11px] h-[11px] relative right-[2px] top-[7px] " />
+            </h1>
             <div
-               class='flex flex-row justify-between w-[100%] transition transition-transform ease-in-out max-w-[1215px] h-[100%] max-h-[450px]'>
+               class='flex flex-row justify-between w-[100%] transition transition-transform ease-in-out max-w-[1215px] h-[100%] max-h-[450px] lg:hidden'>
                <div class="header-img w-[300px] py-[100px] duration-[800ms] ease-in-out grayscale-[100%]
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
                    translate-x-[-10px]">
-                  <div class=" card transition duration-[800ms]
-                           opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
+                  <div class="card transition duration-[800ms] opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
                      <p class="font-semibold">Hi👋, My name is Zaidan</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">Team Leader</span></p>
                   </div>
@@ -78,7 +125,7 @@
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
                    translate-x-[-10px]">
                   <div class=" card transition duration-[800ms]
-                           opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
+                           opacity-0 absolute right-[0px] translate-y-[50vw] z-21 bg-[#FFFFFF] p-[20px] rounded-[15px]">
                      <p class="font-semibold">Hi👋, My name is Syafiq</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">UI/UX Designer</span></p>
                   </div>
@@ -88,13 +135,14 @@
                   hover:grayscale-0 hover:scale-125 translate-y-[-10px] hover:w-[350px] hover:translate-y-[-100px] 
                    translate-x-[-10px]">
                   <div class="card left transition duration-[800ms]
-                           opacity-0 absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
+                           opacity-0 z-[10] absolute right-[0px] translate-y-[50vw] bg-[#FFFFFF] p-[20px] rounded-[15px]">
                      <p class="font-semibold">Hi👋, My name is Fajar</p>
                      <p class="font-semibold">I'm a <span class="text-[#9747FF]">Back-End Developer</span></p>
                   </div>
                   <img class="transition duration-500 max-h-[40vw]" src="./assets/img/people/fajar-transparent.png" />
                </div>
             </div>
+            <img class="hidden lg:block" src="./assets/img/people/all-member.png" alt="">
          </div>
          <div class="marquee-w pointer-events-none	">
             <div class="marquee font-bebas">
@@ -106,18 +154,18 @@
       <!-- END JUMBOTRON -->
 
       <!-- GREETINGS -->
-      <div class="flex flex-row container font-sora mx-auto max-w-[1215px] justify-evenly mt-[10rem] mb-[10rem]">
-         <h1 class="max-w-[45rem] text-[36px] text-start font-medium">
+      <div class="flex flex-row container font-sora px-5 mx-auto w-[1215px] max-w-[100%] justify-evenly mt-[5rem] mb-[10rem] md:mx-[2rem] md:max-w-fit sm:flex-col md:gap-[20px] md:mt-[72px] md:mb-[72px]">
+         <h1 class="max-w-[45rem] text-[36px] text-start font-medium md:text-[20px] md:max-w-[20rem]">
             Our vision is to <span
-               class="underline text-[#15013C]">Build. Develop. Grow.</span> Bringing your digital dreams to reality with professionalism</h1>
+               class="underline text-[#15013C]">Build. Develop. Grow.</span> Bringing your digital dreams to reality with professionalism.</h1>
          <div class="flex flex-col max-w-[19rem] flex-start">
-            <p class="text-[20px] font-normal">With our passion in Code, Design, and Build, we make website and app to
+            <p class="text-[20px] font-normal md:text-[14px]">With our passion in Code, Design, and Build, we make website and app to
                help your brand stands out. Don't worry about stuff, just leave it to us!</p>
             <div class="relative">
-               <a href="pages/about.html">
+               <a href="./pages/about.html">
                   <div
-                     class="w-[200px] h-[200px] mt-[3rem] bg-[#15013C] text-white rounded-full flex justify-center items-center duration-700 ease-in-out hover:w-[80%] hover:bg-[#230264] relative group">
-                     <span class="transition-opacity duration-700 ease-in-out group-hover:opacity-100">About Us</span>
+                     class="w-[200px] h-[200px] mt-[3rem] bg-[#15013C] text-white rounded-full flex justify-center items-center duration-700 ease-in-out hover:w-[80%] hover:bg-[#230264] relative group md:w-[180px] md:h-[180px]">
+                     <span class="transition-opacity duration-700 ease-in-out group-hover:opacity-100 md:text-[14px]">About Us</span>
                      <span
                         class="absolute transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
                         <img src="./assets/icons/arrow-button.svg" />
@@ -130,22 +178,23 @@
       <!-- END GREETING -->
       
       <!-- INFINITE carousel -->
+      <img src="./assets/img/backgrounds/bg.png" class="hidden md:block">
       <div class="infinite-carousel-container flex flex-col gap-[50px]">
-         <div class="flex gap-[50px] container mx-auto carousel-slide-track">
+         <div class="flex gap-[50px] container mx-auto carousel-slide-track md:hidden">
             <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
-               <img class=" object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
+               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/labra-img.png" alt="Image 1">
             </div>
-            <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
+            <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px] ">
                <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/peminjaman-aula.png" alt="Image 1">
             </div>
             <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
-               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/ingfokan-pkl.png" alt="Image 1">
+               <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/ingfokan-pkl-img.png" alt="Image 1">
             </div>
             <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
                <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/sija-26-img.png" alt="Image 1">
             </div>
          </div>
-         <div class="carousel-container w-auto">
+         <div class="carousel-container w-auto md:hidden">
             <div class="flex gap-[50px]  container mx-auto carousel-slide-track-2">
                <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
                   <img class="object-contain h-auto w-[100%]" src="./assets/img/projects/libraerity-img.png" alt="Image 1">
@@ -165,35 +214,35 @@
       <!-- END INFINITE carousel -->
       
       <!-- OUR PROJECT -->
-      <div class="min-h-[200px] bg-[#15013C] py-[75px]">
-         <div class="mx-auto max-w-[1215px] flex flex-col items-center">
-            <div class="flex justify-center gap-[10px] items-center">
-               <img src="./assets/icons/arrow-project.svg" alt="" />
-               <h3 class="font-sora text-[#FFFFFF] text-[3rem]">Our Best Project</h3>
+      <div class="min-h-[200px] bg-[#15013C] py-[75px] flex justify-center">
+         <div class="w-[1215px] max-w-[100%] px-5 flex flex-col items-center">
+            <div class="flex justify-center gap-[10px] items-center ">
+               <img src="./assets/icons/arrow-project.svg" alt="" class="md:w-[25px] md:h-[25px]" />
+               <h3 class="font-sora text-[#FFFFFF] text-[3rem] md:text-[24px]">Our Best Project</h3>
             </div>
-            <div class="py-[115px] flex flex-col gap-[115px]">
-               <div class="flex gap-[100px] items-center">
-                  <img class="min-w-[545px] h-[300px] object-cover" src="./assets/img/projects/labra-img.png" />
-                  <div>
-                     <p class="font-sora text-white font-semibold text-[2rem]">Labra V.22</p>
-                     <p class="font-sora text-white font-light text-[1.5rem]">
+            <div class="py-[115px] flex flex-col gap-[115px] md:w-[100vw] md:gap-[80px]">
+               <div class="flex gap-[100px] items-center lg:gap-[20px] lg:flex-col">
+                  <img class="min-w-[545px] h-[300px] object-cover object-top md:min-w-[253px] md:h-[139px]" src="./assets/img/projects/labra-img.png" />
+                  <div class="md:flex md:flex-col md:w-[253px]">
+                     <p class="font-sora text-white font-semibold text-[2rem] md:text-[20px] lg:text-center">Labra V.22</p>
+                     <p class="font-sora text-white font-light text-[1.5rem] md:text-[14px] lg:text-center">
                         Labra is a radio IP product developed by an Indonesian company. We were responsible for designing and building the landing page.
                      </p>
                   </div>
                </div>
-               <div class=" flex flex-row-reverse gap-[100px] items-center">
-                  <img class="min-w-[545px] h-[300px] object-cover object-top"  src="./assets/img/projects/ardtech-img.png" />
-                  <div>
-                     <p class="font-sora text-white text-right font-semibold text-[2rem]">ARD Tech</p>
-                     <p class="font-sora text-white text-right font-light text-[1.5rem]">ARD Tech, a dynamic IoT company based in Indonesia, has entrusted us with the task of designing and developing their
+               <div class=" flex flex-row-reverse gap-[100px] items-center lg:gap-[20px] lg:flex-col">
+                  <img class="min-w-[545px] h-[300px] object-cover object-top md:min-w-[253px] md:h-[139px]"  src="./assets/img/projects/ardtech-img.png" />
+                  <div class="md:flex lg:flex-col md:w-[253px]">
+                     <p class="font-sora text-white text-right font-semibold text-[2rem] md:text-[20px] lg:text-center">ARD Tech</p>
+                     <p class="font-sora text-white text-right font-light text-[1.5rem] md:text-start md:text-[14px] lg:text-center">ARD Tech, a dynamic IoT company based in Indonesia, has entrusted us with the task of designing and developing their
                      impactful landing page and seamless e-commerce platform.</p>
                   </div>
                </div>
-               <div class="flex gap-[100px] items-center">
-                  <img class="min-w-[545px] h-[300px] object-cover object-top" src="./assets/img/projects/Ingfokan-pkl.png" />
-                  <div>
-                     <p class="font-sora text-white font-semibold text-[2rem]">IngfokanPKL</p>
-                     <p class="font-sora text-white font-light text-[1.5rem]">
+               <div class="flex gap-[100px] items-center lg:gap-[20px] lg:flex-col">
+                  <img class="min-w-[545px] h-[300px] object-cover object-top md:min-w-[253px] md:h-[139px]" src="./assets/img/projects/ingfokan-pkl-img.png" />
+                  <div class="md:flex lg:flex-col md:w-[253px] md:text-[20px]">
+                     <p class="font-sora text-white font-semibold text-[2rem] lg:text-center">IngfokanPKL</p>
+                     <p class="font-sora text-white font-light text-[1.5rem] md:text-[14px] lg:text-center">
                            IngfokanPKL is an online platform specifically designed to help individuals search and find relevant information on internships. The website was developed in response to a request from SMKN 26 Jakarta, our school.
                      </p>
                   </div>
@@ -207,66 +256,101 @@
       </div>
       <!-- END OUR PROJECT -->
 
-      <!-- TRUSTED BY -->
-      <div class="container mx-auto">
-
-      </div>
-      <!-- END TRUSTED BY -->
-
       <!-- ARTICLE -->
-      <div class="bg-[#FFFFFF] py-[5rem] font-sora">
-         <div class="mx-auto max-w-[1215px] flex flex-col items-center">
-            <h1 class="flex flex-row font-bold text-[3rem] mb-[4.9rem] mt-[5rem] gap-[20px]">Our Article & Resources <img src="assets/icons/arrow-article.svg"></h1>
-            <div class="flex flex-wrap justify-center">
+      <div class="bg-[#FFFFFF] py-[5rem] font-sora flex justify-center">
+         <div class="w-[1215px] max-w-[100%] flex flex-col items-center md:max-w-[100%]">
+            <h1 class="flex flex-row font-bold text-[3rem] mb-[4.9rem] mt-[5rem] gap-[20px] md:text-[24px]">Our Article & Resources <img src="assets/icons/arrow-article.svg" class="md:w-[25px] md:h-[25px] md:relative md:top-[2.5px]"></h1>
+            <div class="flex flex-wrap justify-center md:gap-[50px] md:w-[100%]">
                
-               <div class="flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition duration-700 ease-in-out hover:-translate-y-[15px]">
-                  <img class="h-[400px] w-[100%] object-cover"  src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png" alt="">
+               <div class="flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition duration-700 ease-in-out hover:-translate-y-[15px] md:max-w[394px] md:w-[394px]">
+                  <img class="h-[400px] w-[100%] object-cover md:w-[330px] md:h-[330px]"  src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png" alt="">
                   <div class="flex flex-col gap-[10px] flex-1">
-                     <h1 class=" text-[1.5rem] font-semibold">Iterasi Array Pada Pemrograman Ruby Menggunakan Select, Reject, dan Delete</h1>
-                     <p class=" text-[1rem] text-[#757575]">Sebagai beginner di Ruby, untuk Iterasi array di ruby ada bermacam — macam, namun yang ingin saya share di sini antara lain adalah meth...</p>
+                     <h1 class=" text-[1.5rem] font-semibold md:text-[1.25rem]">Iterasi Array Pada Pemrograman Ruby Menggunakan Select, Reject, dan Delete</h1>
+                     <p class=" text-[1rem] text-[#757575] md:text-[14px]">Sebagai beginner di Ruby, untuk Iterasi array di ruby ada bermacam — macam, namun yang ingin saya share di sini antara lain adalah meth...</p>
                   </div>
-                  <div class="flex justify-between w-[100%] items-center">
+                  <div class="flex justify-between w-[100%] items-center md:flex-col md:items-start md:gap-[10px]">
                      <div class="flex items-center gap-[10px]">
-                        <img src="https://miro.medium.com/fit/c/176/176/1*HgKKyG0nQ3V4tj93V8UrYg.jpeg" class="rounded-[50%] h-[50px] w-[50px]">
-                        <p class="article-date ">Fajar Mulyo Setyawan</p>
+                        <img src="https://miro.medium.com/fit/c/176/176/1*HgKKyG0nQ3V4tj93V8UrYg.jpeg" class="rounded-[50%] h-[50px] w-[50px] md:h-[45px] md:w-[45px]">
+                        <p class="article-date md:text-[16px]">Fajar Mulyo Setyawan</p>
                      </div>
-                     <p class="">10 days ago</p>
+                     <p class="md:ml-[57px]">a week ago</p>
                   </div>
-                  <a href="https://medium.com/@fajarmulyos/iterasi-array-pada-pemrograman-ruby-menggunakan-select-reject-dan-delete-30c4d5e99c8c" target="_blank">
+                  <a class="justify-self-end md:w-[100%]" href="https://medium.com/@fajarmulyos/iterasi-array-pada-pemrograman-ruby-menggunakan-select-reject-dan-delete-30c4d5e99c8c" target="_blank">
                      <button 
-                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms]">
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
                         Read More
                      </button>
                   </a>
                </div>
 
-               <div class="flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition duration-700 ease-in-out hover:-translate-y-[15px]">
-                  <img class="h-[400px] w-[100%] object-cover"  src="https://miro.medium.com/v2/resize:fit:720/0*E5_d4aeDR3x_ZcGH" alt="">
+               <div class="flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition duration-700 ease-in-out hover:-translate-y-[15px] md:max-w[394px] md:w-[394px]">
+                  <img class="h-[400px] w-[100%] object-cover md:w-[330px] md:h-[330px]"  src="https://miro.medium.com/v2/resize:fit:720/0*E5_d4aeDR3x_ZcGH" alt="">
                   <div class="flex flex-col gap-[10px] flex-1">
-                     <h1 class=" text-[1.5rem] font-semibold">Be A Leader. Not A Boss</h1>
-                     <p class=" text-[1rem] text-[#757575]">Do you ever feel like your team isn't working properly, can’t work together and they work by themself? thus, what are
+                     <h1 class=" text-[1.5rem] font-semibold md:text-[1.25rem]">Be A Leader. Not A Boss</h1>
+                     <p class=" text-[1rem] text-[#757575] md:text-[14px]">Do you ever feel like your team isn't working properly, can’t work together and they work by themself? thus, what are
                      you going to do as a...</p>
                   </div>
-                  <div class="flex justify-between w-[100%] items-center">
+                  <div class="flex justify-between w-[100%] items-center md:flex-col md:items-start md:gap-[10px]">
                      <div class="flex items-center gap-[10px]">
-                        <img src="./assets/img/people/zaidan-img.jpg" class="rounded-[50%] object-cover h-[50px] w-[50px]">
-                        <p class="article-date ">Zaidan Adli Anandra</p>
+                        <img src="./assets/img/people/zaidan-img.jpg" class="rounded-[50%] object-cover h-[50px] w-[50px] md:h-[45px] md:w-[45px]">
+                        <p class="article-date md:text-[16px]">Zaidan Adli Anandra</p>
                      </div>
-                     <p class="">2 days ago</p>
+                     <p class="md:ml-[55px]">6 days ago</p>
                   </div>
-                  <a class="justify-self-end bg-[#00000]" href="https://medium.com/@zaidanadli83/be-a-leader-not-a-boss-f3e62bad7698" target="_blank">
+                  <a class="justify-self-end md:w-[100%] bg-[#00000]" href="https://medium.com/@zaidanadli83/be-a-leader-not-a-boss-f3e62bad7698" target="_blank">
                      <button 
-                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms]">
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
                         Read More
                      </button>
                   </a>
                </div>
                
+               <div class="article article-fade flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition-all duration-700 ease-in-out hover:-translate-y-[15px] md:max-w[394px] md:w-[394px]">
+                  <img class="h-[400px] w-[100%] object-cover md:w-[330px] md:h-[330px]" src="./assets/img/backgrounds/figma-thumbnail.jpg" alt="">
+                  <div class="flex flex-col gap-[10px] flex-1">
+                     <h1 class=" text-[1.5rem] font-semibold md:text-[1.25rem]">My Top 3 Favorites Figma Plugin</h1>
+                     <p class=" text-[1rem] text-[#757575] md:text-[14px]">You are a UI/UX Designer who have working with figma, sometimes you have wasting time for doing some minor tasks, here some plugin to help you accomplish many minor tasks faster. Iconify This plugin will...</p>
+                  </div>
+                  <div class="flex justify-between w-[100%] items-center md:flex-col md:items-start md:gap-[10px]">
+                     <div class="flex items-center gap-[10px]">
+                        <img src="./assets/img/people/syafiq-img.jpg" class="rounded-[50%] object-cover h-[50px] w-[50px] md:h-[45px] md:w-[45px]">
+                        <p class="article-date md:text-[16px]">Muhammad Fadillah Syafiq</p>
+                     </div>
+                     <p class="md:ml-[55px]">3 days ago</p>
+                  </div>
+                  <a class="justify-self-end md:w-[100%]"  href="https://medium.com/@Foursaken/my-top-3-favorites-figma-plugin-107c4fbef423" target="_blank">
+                     <button 
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
+                        Read More
+                     </button>
+                  </a>
+               </div>
+
+               <div class="article article-fade flex flex-col gap-[20px] items-start w-[500px] min-h-[500px] max-w-[500px] p-[32px] transition-all duration-700 ease-in-out hover:-translate-y-[15px] md:max-w[394px] md:w-[394px]">
+                  <img class="h-[400px] w-[100%] object-cover md:w-[330px] md:h-[330px]" src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*8Zx0p6HazdpilzKC.png" alt="">
+                  <div class="flex flex-col gap-[10px] flex-1">
+                     <h1 class=" text-[1.5rem] font-semibold md:text-[1.25rem]">Our Favorite Front-End Tech Stack.</h1>
+                     <p class=" text-[1rem] text-[#757575] md:text-[14px]">ReactJs is a popular JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the application state efficiently. ReactJs is known for its simplicity...</p>
+                  </div>
+                  <div class="flex justify-between w-[100%] items-center md:flex-col md:items-start md:gap-[10px]">
+                     <div class="flex items-center gap-[10px]">
+                        <img src="./assets/img/people/alva-img.jpg" class="rounded-[50%] object-cover h-[50px] w-[50px] md:h-[45px] md:w-[45px]">
+                        <p class="article-date md:text-[16px]">Stanislaus Alva Jufinto</p>
+                     </div>
+                     <p class="md:ml-[55px]">5 days ago</p>
+                  </div>
+                  <a class="justify-self-end md:w-[100%]"  href="https://medium.com/@Foursaken/my-favorite-front-end-tech-stack-26e05ff9c059" target="_blank">
+                     <button 
+                        class="rounded-[50px] border border-[#15013C] h-[50px] w-[150px] text-[1rem]  text-[#15013C] hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] md:w-[100%]">
+                        Read More
+                     </button>
+                  </a>
+               </div>
             </div>
 
             <button
-               class="rounded-[50px] border-[1px] h-[95px] mt-[10rem] w-[264px] text-[#00000] border-black text-[1.5rem]  hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] ease-out">
-               Look More
+               class="article-button rounded-[50px] border-[1px] h-[95px] mt-[10rem] w-[264px] text-[#00000] border-black text-[1.5rem]  hover:text-[#FFFFFF] hover:bg-[#15013C] transition duration-[500ms] ease-out">
+               More
             </button>
 
          </div>
@@ -274,68 +358,67 @@
       <!-- END ARTICLE -->
 
       <!-- FOOTER -->
-      <div id="footer" class="bg-[#15013C] font-sora text-white">
-         <div class="mx-auto max-w-[1215px] flex flex-col items-start px-[161px] pt-[162px]">
-            <div class="w-[40rem] text-[6rem] font-semibold">
-               <h1 class="ml-[6.4rem] ">Let’s work </h1>
-               <span class="relative bottom-[2rem]">Together!</span>
-            </div>
-            <div class="flex align-center justify-center flex-col">
-               <div class="relative h-[1px] w-[67.5rem] bg-[#FFFFFF] top-[20px]"></div>
-               <a href="./pages/contact.html">
-                  <div class="rounded-full w-[200px] relative translate-y-[-80px] ml-[52rem] h-[200px] bg-[#5417CF] transition-all duration-[500ms] flex justify-center items-center hover:w-[250px] hover:bg-[#230264] group">
-                     <span class="transition-all duration-700 ease-in-out group">Contact Us</span>
-                     <span
-                        class="group-hover absolute transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
-                        <img src="./assets/icons/arrow-button.svg" />
-                     </span>
-                  </div>
-               </a>
-            </div>
-            <div class="flex gap-[40px] translate-y-[-100px]">
-               <button
-                  class="rounded-[50px] px-[50px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
-                  contact@foursaken.com
-               </button>
-               <button
-                  class="rounded-[50px] px-[50px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
-                  +62 896 0194 3530
-               </button>
-            </div>
-
-            <div class="flex flex-row py-[77px] gap-[150px]">
-               <div id="alamat" class="flex flex-col align-start gap-[32px] w-[19.5rem]">
-                  <div class="flex flex-row justify-between">
-                     <h1 class="text-[24px] font-semibold">Meet With Us At</h1>
-                     <img src="assets/icons/arrow-alamat.svg" alt="">
-                  </div>
-                  <p class="text-[16px]">Jl. Balai Pustaka Baru I No.2, RW.7, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220</p>
-                  <div class="flex flex-row justify-between align-center gap-[72px] w-[22zpx]">
-                     <a href=""><img src="assets/icons/linkdln.svg" alt=""></a>
-                     <a href=""><img src="assets/icons/instagram.svg" alt=""></a>
-                     <a href=""><img src="assets/icons/email.svg" alt=""></a>
-                     <a href=""><img src="assets/icons/youtube.svg" alt=""></a>
-                  </div>   
+      <div id="footer" class="bg-[#15013C] font-sora text-white flex justify-center items-center flex-col max-w-[100%] px-[20px]">
+         <div class="w-[1215px] max-w-[100%] flex flex-col items-center pt-[162px]">
+            <div class="flex flex-col md:w-[100vw]">
+               <div class="max-w-[100%] text-[6rem] font-semibold items-self-start">
+                  <h1 class="pl-[6.4rem] lg:text-[3rem]">Let’s work </h1>
+                  <span class="relative bottom-[2rem] lg:text-[3rem] lg:ml-[5px]">Together!</span>
                </div>
+               <div class="relative bg-[#00000] flex align-center justify-center flex-col max-w-[100%] px-[20px]">
+                  <div class="relative h-[1px] w-[1128px] max-w-[90vw] bg-[#FFFFFF] top-[20px]"></div>
+                  <a href="./pages/contact.html">
+                     <div class="absolute rounded-full w-[200px] translate-y-[-40%] lg:translate-y-[-35%] left-[75%] lg:left-auto lg:right-[5%] h-[200px] lg:h-[120px] lg:w-[120px] bg-[#5417CF] transition-all duration-[500ms] flex justify-center items-center hover:w-[286px] hover:bg-[#230264] group">
+                        <span class="transition-all duration-700 ease-in-out group md:text-[14px]">Contact Us</span>
+                        <span
+                           class="group-hover absolute transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 right-[2rem]">
+                           <img src="./assets/icons/arrow-button.svg" />
+                        </span>
+                     </div>
+                  </a>
+               </div>
+               <div class="flex gap-[40px] lg:flex-col translate-y-[150px] mb-[200px] px-[20px]">
+                  <button
+                     class="rounded-[50px] px-[50px] lg:px-[0px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                     contact@foursaken.com
+                  </button>
+                  <button
+                     class="rounded-[50px] px-[50px] lg:px-[0px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                     +62 896 0194 3530
+                  </button>
+               </div>
+            </div>
 
-               <div id="pages" class="flex flex-col font-sora justify-between ">
-                  <h1 class="font-semibold text-[24px]">Pages</h1>
-                  <ul class="flex flex-col text-[16px] gap-[16px]">
+            <div class="flex flex-col justify-center align-center items-center py-[77px] gap-[150px]">
+               <div id="pages" class="flex flex-col font-sora justify-between items-center">
+                  <ul class="flex flex-col text-[32px] items-center gap-[16px]">
                      <li><a href="/">Home</a></li>
                      <li><a href="./pages/about.html">About</a></li>
                      <li><a href="./pages/contact.html">Contact Us</a></li>
                   </ul>
                </div>
 
+               <div id="alamat" class="flex flex-col align-center items-center justify-center gap-[32px] w-fit">
+                  <h1 class="text-[36px] font-sora font-semibold text-center">Join our vibrant community</h1>
+                  <div class="flex flex-row justify-between align-center gap-[78px]">
+                     <a href=""><img src="./assets/icons/linkdln.svg" alt=""></a>
+                     <a href=""><img src="./assets/icons/instagram.svg" alt=""></a>
+                     <a href=""><img src="./assets/icons/email.svg" alt=""></a>
+                     <a href=""><img src="./assets/icons/youtube.svg" alt=""></a>
+                  </div>   
+               </div>
+
+               <div class="flex flex-col items-center justify-center gap-[32px] font-inter">
+                  <p class="text-[24px] font-light text-center">© 2023 Foursaken. All rights reserved.</p>
+                  <p class="font-semibold text-[24px] text-center">Made with 💜 by Team</p>
+               </div>
             </div>
 
          </div>
       </div>
       <!-- END FOOTER -->
-
    </div>
-   <script src="index.js" type="text/babel">
-         
-   </script>
+   <script src="./index.js"></script>
+
 </body>
 </html>
