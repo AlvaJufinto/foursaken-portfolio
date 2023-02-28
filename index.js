@@ -1,7 +1,5 @@
 var rellax = new Rellax('.rellax');
 
-AOS.init();
-
 function preloaderShow() {
 
   window.addEventListener('load', function() {
@@ -10,8 +8,9 @@ function preloaderShow() {
     const video = preloader.querySelector("video");
     
     setTimeout(function() {
-        preloader.classList.add("hide");
-        content.style.display = "block";
+      preloader.classList.add("hide");
+      content.style.display = "block";
+      AOS.init();
     }, 2900);
     
       // add an event listener for the end of the animation
