@@ -11,6 +11,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora&family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
    
    <script src="https://cdn.tailwindcss.com"></script>
+   
    <script src="./tailwind.config.js"></script>
    <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -178,9 +179,9 @@
       <!-- END GREETING -->
       
       <!-- INFINITE carousel -->
-      <img loading="lazy" src="./assets/img/backgrounds/bg.png" class="hidden md:block">
-      <div class="infinite-carousel-container carousel-container flex flex-col gap-[50px]">
-         <div class="carousel-item flex gap-[50px] container mx-auto carousel-slide-track md:hidden">
+      <!-- <img loading="lazy" src="./assets/img/backgrounds/bg.png" class="hidden md:block"> -->
+      <div class="infinite-carousel-container carousel-container flex flex-col gap-[50px] min-w-[100vw]">
+         <div class="carousel-item flex gap-[50px] container carousel-slide-track min-w-[100vw] md:hidden">
             <div class="carousel-slide bg-[#C8B5FD] w-[545px] p-[15px]">
                <img loading="lazy" class="object-contain h-auto w-[100%]" src="./assets/img/projects/pet-img.png" alt="Image 1">
             </div>

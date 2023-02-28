@@ -63,6 +63,18 @@ function toggleBlur() {
 }
 toggleBlur();
 
+function infiniteLoop() {
+  const slideContainer = document.querySelector('.carousel-item');
+  const slides = document.querySelectorAll('.carousel-slide');
+  
+  // setInterval(() => {
+  //   slides.forEach((slide, i) => {
+  //     slideContainer.prepend(slide)
+  //     console.log(slide, i);
+  //   })
+  // }, 1000)
+}
+infiniteLoop()
 
 function articleShow() {
   const articles = document.querySelectorAll('.article');
