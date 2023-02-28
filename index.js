@@ -1,5 +1,7 @@
 var rellax = new Rellax('.rellax');
 
+AOS.init();
+
 function preloaderShow() {
 
   window.addEventListener('load', function() {
