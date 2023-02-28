@@ -17,12 +17,12 @@
 </head>
 <body>
    <!-- preloader -->
-   <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
+   <!-- <div id="preloader" class="bg-[#5417CE] absolute z-[100] top-0 left-0 ">
       <video class="h-[100vh] w-[400vw]" src="../assets/video/forsaken-preload.mp4" autoplay loop muted></video>
-   </div>
+   </div> -->
    <!-- preloader -->
    
-   <div id="content">   
+   <div id="content.">   
    <!-- NAVBAR -->
    <nav class="navbar scrolled transition-all duration-[500ms] fixed top-[0] left-[0] w-[100vw] z-[5] h-[70px] flex justify-center items-center font-semibold text-white">
       <ul class="flex w-[1215px] justify-between px-5 font-sora bg-transparent">
@@ -82,14 +82,18 @@
             </div>
          </div>
          <div class="flex flex-col gap-[10px]">
-            <button
-               class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
-               contact@foursaken.com
-            </button>
-            <button
-               class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
-               +62 896 0194 3530
-            </button>
+            <a href="mailto:foursaken.team@gmail.com">
+               <button
+                  class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  foursaken.team@gmail.com
+               </button>
+            </a>
+            <a href="https://wa.me/6289601943530" target="_blank">
+               <button
+                  class="rounded-[50px] px-[30px] border h-[50px] min-w-[264px] text-[#FFFFFF] text-[1rem] text-left hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                  +62 896 0194 3530
+               </button>
+            </a>
          </div>
       </div>
    </div>
@@ -175,9 +179,9 @@
    <!-- ENDS OUR TEAM -->
 
    <!-- QUOTES -->
-   <div class="flex jusify-center items-center h-[430px] bg-auto z-[-100] bg-center bg-no-repeat bg-local" style="background-image: url('../assets/img/backgrounds/quote-bg.png');">
+   <div class="flex jusify-center items-center min-w-[10px] bg-cover z-[-100] bg-center bg-no-repeat bg-local md:bg-auto md:translate-y-0" style="background-image: url('../assets/img/backgrounds/quote-bg.png'); height: 432px;">
       <div class="container mx-auto max-w-fit md:px-10">
-         <h1 class="font-sora text-[4rem] font-semibold text-[#FFFFFF] md:text-[40px] md:text-center">“You Dream It. We Build It.”</h1>
+         <h1 class="font-sora text-[4rem] font-bold text-[#FFFFFF] md:text-[40px] md:text-center">“You Dream It. We Build It.”</h1>
       </div>
    </div>
    <!-- <div class="flex justify-center items-center h-[430px]">
@@ -209,14 +213,18 @@
                </a>
             </div>
             <div class="flex gap-[40px] lg:flex-col translate-y-[150px] mb-[200px] px-[20px]">
-               <button
-                  class="rounded-[50px] px-[50px] lg:px-[0px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
-                  contact@foursaken.com
-               </button>
-               <button
-                  class="rounded-[50px] px-[50px] lg:px-[0px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
-                  +62 896 0194 3530
-               </button>
+               <a href="mailto:foursaken.team@gmail.com">
+                  <button
+                     class="rounded-[50px] px-[50px] lg:px-[0px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                     foursaken.team@gmail.com
+                  </button>
+               </a>
+               <a href="https://wa.me/6289601943530" target="_blank">
+                  <button
+                     class="rounded-[50px] px-[50px] lg:px-[0px] border h-[95px] min-w-[264px] text-[#FFFFFF] text-[1.5rem] font-sora hover:text-[#15013C] hover:bg-[#FFFFFF] transition duration-[500ms]">
+                     +62 896 0194 3530
+                  </button>
+               </a>
             </div>
          </div>
 
