@@ -1,3 +1,5 @@
+var rellax = new Rellax('.rellax');
+
 function preloaderShow() {
 
   window.addEventListener('load', function() {
