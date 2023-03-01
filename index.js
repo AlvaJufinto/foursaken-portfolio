@@ -12,7 +12,9 @@ function preloaderShow() {
     setTimeout(function() {
       preloader.classList.add("hide");
       content.style.display = "block";
-      AOS.init();
+      AOS.init({
+        once: true
+      });
     }, 2900);
     
       // add an event listener for the end of the animation
@@ -67,19 +69,6 @@ function toggleBlur() {
 
 }
 toggleBlur();
-
-function infiniteLoop() {
-  const slideContainer = document.querySelector('.carousel-item');
-  const slides = document.querySelectorAll('.carousel-slide');
-  
-  // setInterval(() => {
-  //   slides.forEach((slide, i) => {
-  //     slideContainer.prepend(slide)
-  //     console.log(slide, i);
-  //   })
-  // }, 1000)
-}
-infiniteLoop()
 
 function articleShow() {
   const articles = document.querySelectorAll('.article');

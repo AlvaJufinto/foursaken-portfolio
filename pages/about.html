@@ -8,6 +8,7 @@
    
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
    
    <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +24,7 @@
    </div>
    <!-- preloader -->
    
-   <div id="content.">   
+   <div id="content">   
    <!-- NAVBAR -->
    <nav class="navbar scrolled transition-all duration-[500ms] fixed top-[0] left-[0] w-[100vw] z-[5] h-[70px] flex justify-center items-center font-semibold text-white">
       <ul class="flex w-[1215px] justify-between px-5 font-sora bg-transparent">
@@ -103,14 +104,14 @@
    <!-- HEADER -->
    <div class="w-[100%] bg-center font-sora relative  text-white bg-no-repeat bg-cover h-[100vh] flex flex-col items-center justify-center overflow-hidden z-[-2] items-center md:h-[100vh] " style="background-image: url('../assets/img/backgrounds/sija-bg.png');">
       <div class="flex flex-col items-center justify-center w-[100%] font-sora bg-transparents bg-[#00000]">
-         <h1 class="text-[8rem] font-semibold md:text-[2.25rem]">Discover More</h1>
+         <h1 class="text-[8rem] font-semibold md:text-[2.65rem]">Discover More</h1>
          <div data-rellax-speed="5" data-rellax-xs-speed="1" data-rellax-mobile-speed="1" class="rellax flex gap-[15px] mt-[-100px] translate-y-[-100px] md:mt-[-30px]">
             <img class="w-[220px] md:w-[60px]" src="./../assets/img/people/zaidan-profile.png" alt="zaidan">
             <img class="w-[220px] md:w-[60px]" src="./../assets/img/people/alva-profile.png" alt="alva">
             <img class="w-[220px] md:w-[60px]" src="./../assets/img/people/syafiq-profile.png" alt="syafiq">
             <img class="w-[220px] md:w-[60px]" src="./../assets/img/people/fajar-profile.png" alt="fajar">
          </div >
-         <h1 class="z-[5] mt-[-100px] text-[8rem] font-semibold md:text-[2.75rem] md:mt-[-8%]">About Our Team</h1>
+         <h1 class="z-[5] mt-[-100px] text-[8rem] font-semibold md:text-[2.65rem] md:mt-[-8%]">About Our Team</h1>
       </div>
    </div>
    <!-- END HEADER -->
@@ -132,9 +133,9 @@
       
       <div class="flex flex-col container mx-auto mt-[105px] gap-[70px] px-5 ">
          <div class="about-zaidan flex flex-row gap-[100px] justify-center items-center md:flex-col md:text-center md:gap-[30px]">
-            <img   class="img-zaidan w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/zaidan-profile.png">
-            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px] ">
-               <div class="flex flex-col md:justify-center md:items-center">
+            <img data-aos="fade-right" class="img-zaidan w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/zaidan-profile.png">
+            <div data-aos="fade-left" class="flex flex-col gap-[30px] flex-wrap max-w-[650px] ">
+               <div class="flex flex-col md:justify-center md:items-center" >
                   <h1 class="font-sora text-[40px] font-bold md:text-[20px]">Zaidan Adli Anandra</h1>
                   <p class="font-sora text-[24px] md:text-[16px]">Team Lead</p>
                </div>
@@ -143,8 +144,8 @@
          </div>
 
          <div class="about-alva flex flex-row gap-[100px] justify-center items-center md:flex-col md:flex-col md:text-center md:gap-[30px]">
-            <img   class="w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/alva-profile.png">
-            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+            <img data-aos="fade-right"  class="w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/alva-profile.png">
+            <div data-aos="fade-left"  class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
                <div class="flex flex-col md:justify-center md:items-center">
                   <h1 class="font-sora text-[40px] font-bold md:text-[20px]">Stanislaus Alva Jufinto</h1>
                   <p class="font-sora text-[24px] md:text-[16px]">Front-End Developer</p>
@@ -154,8 +155,8 @@
          </div>
 
          <div class="about-syafiq flex flex-row gap-[100px] justify-center items-center md:flex-col md:flex-col md:text-center md:gap-[30px]">
-            <img   class="w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/syafiq-profile.png">
-            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+            <img data-aos="fade-right" class="w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/syafiq-profile.png">
+            <div data-aos="fade-left" class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
                <div class="flex flex-col md:justify-center md:items-center">
                   <h1 class="font-sora text-[40px] font-bold md:text-[20px]">Muhammad Fadillah Syafiq</h1>
                   <p class="font-sora text-[24px] md:text-[16px]">UI/UX Designer</p>
@@ -165,8 +166,8 @@
          </div>
 
          <div class="about-fajar flex flex-row gap-[100px] justify-center items-center md:flex-col md:flex-col md:text-center md:gap-[30px]">
-            <img   class="w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/fajar-profile.png">
-            <div class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
+            <img data-aos="fade-right"  class="w-[221px] transition-all ease-in-out duration-[400ms] md:w-[145px]" src="../assets/img/people/fajar-profile.png">
+            <div data-aos="fade-left" class="flex flex-col gap-[30px] flex-wrap max-w-[650px]">
                <div class="flex flex-col md:justify-center md:items-center">
                   <h1 class="font-sora text-[40px] font-bold md:text-[20px]">Fajar Mulyo Setyawan</h1>
                   <p class="font-sora text-[24px] md:text-[16px]">Back-End Developer</p>
@@ -253,6 +254,7 @@
    </div>
    
    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script src="./../index.js"></script>
 
 </body>
